@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are | Real Estate Advisory Built From Experience | Rahim International</title>
+<meta name="description" content="Rahim International is a real estate advisory and consulting firm built from direct experience navigating the Moroccan property market — for buyers, diaspora, and developers.">
+<link rel="canonical" href="https://rahiminternational.com/about.html">
+<link rel="alternate" hreflang="en" href="https://rahiminternational.com/about.html">
+<link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/about.html">
+<link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/about.html">
+<link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/about.html">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:title" content="About Us | Rahim International">
+<meta property="og:description" content="Built from real experience buying property in Morocco. We help buyers and developers make better decisions in the Rabat-Salé-Kénitra market.">
+<meta property="og:image" content="https://rahiminternational.com/alirahim.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rahiminternational.com/about.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Rahim International","url":"https://rahiminternational.com","email":"contact@RahimInternational.com","telephone":"+212642773249","address":{"@type":"PostalAddress","streetAddress":"70 Av. Youssef Ben Tachfine","addressLocality":"Kénitra","postalCode":"14000","addressCountry":"MA"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="shared.css">
+<style>
+  /* ---- Page-specific styles ---- */
+  .about-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(280px,0.75fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .body-text {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+
+  /* Team section */
+  .team-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(340px,0.85fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .team-section .section-title { color: var(--white); }
+  .team-section .body-text { color: rgba(255,255,255,0.68); }
+  .team-panel {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border-warm);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .team-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--copper);
+  }
+  .team-panel-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .team-panel-body { padding: 2rem 2rem 2rem 2.4rem; }
+  .team-role {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .team-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .team-bio {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 1.5rem;
+  }
+  .team-contact-row {
+    display: grid;
+    gap: 0.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line-dark);
+  }
+  .team-contact-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .team-contact-icon {
+    width: 30px; height: 30px;
+    border: 1px solid var(--border-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    color: var(--copper);
+  }
+  .team-contact-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.15rem;
+  }
+  .team-contact-value,
+  .team-contact-value a {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+  }
+  .team-locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line-dark);
+    margin-top: 1.5rem;
+  }
+  .team-location {
+    background: rgba(255,255,255,0.04);
+    padding: 1rem;
+  }
+  .team-location-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.25rem;
+  }
+  .team-location-text {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.66);
+  }
+
+  /* Background/story section */
+  .story-section { background: var(--ink); }
+  .story-section .section-title { color: var(--white); }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 3.5rem;
+  }
+  .story-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 1.2rem;
+  }
+  .story-image {
+    min-height: 260px;
+    margin: 2rem 0;
+    border: 1px solid var(--border-warm);
+    background: url('thebridge.png') center / cover;
+  }
+  .story-highlight {
+    border: 1px solid var(--border-warm);
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    margin-top: 1.5rem;
+  }
+  .story-highlight-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.8rem;
+  }
+  .story-highlight-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--white);
+  }
+
+  /* Image break quote */
+  .image-break {
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+  }
+  .image-break-bg,
+  .image-break-overlay { position: absolute; inset: 0; }
+  .image-break-bg {
+    background: url('kenitratgv.png') center / cover;
+  }
+  .image-break-overlay {
+    background: linear-gradient(105deg, rgba(8,26,51,0.94), rgba(8,26,51,0.6)), rgba(8,26,51,0.28);
+  }
+  .image-break-content {
+    position: relative;
+    z-index: 2;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 5%;
+  }
+  .image-break-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.4;
+    max-width: 760px;
+  }
+
+  /* Values grid */
+  .values-section { background: var(--cream); }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    box-shadow: var(--shadow);
+    margin-top: 3.5rem;
+  }
+
+  /* Team experience */
+  .experience-section { background: var(--steel); }
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 3rem;
+  }
+  .exp-tag {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.4rem 1.5rem;
+    position: relative;
+    transition: box-shadow 0.25s;
+  }
+  .exp-tag::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 3px; width: 100%;
+    background: linear-gradient(90deg, var(--copper), var(--gold));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .exp-tag:hover { box-shadow: var(--shadow); }
+  .exp-tag:hover::before { opacity: 1; }
+  .exp-icon { font-size: 1.4rem; color: var(--copper); margin-bottom: 0.8rem; }
+  .exp-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  /* CTA */
+  .about-cta { background: var(--navy); text-align: center; }
+  .about-cta .section-title { color: var(--white); }
+  .about-cta .section-eyebrow { justify-content: center; }
+
+  @media (max-width: 900px) {
+    .about-intro-grid,
+    .team-section,
+    .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .values-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    .values-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="index.html" class="brand" aria-label="Rahim International home">
+    <img src="logo.png" alt="" class="brand-logo" aria-hidden="true">
+    <span class="brand-text">
+      <span class="brand-name">Rahim <span>International</span></span>
+      <span class="brand-subtitle">Real Estate Advisory &amp; Consulting</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+    <span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active" aria-current="page">Who We Are</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buyers</button>
+      <div class="nav-dropdown-menu" aria-label="Buyer categories">
+        <a href="investors-international.html">International Buyers</a>
+        <a href="investors-mre.html">MRE Buyers</a>
+        <a href="investors-local.html">Local Buyers</a>
+      </div>
+    </li>
+    <li><a href="services-developers.html">Developer Services</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buying Guides</button>
+      <div class="nav-dropdown-menu">
+        <a href="guides/index.html">Buying Guides Overview</a>
+        <a href="guides/buying-property-morocco.html">Buying Property in Morocco</a>
+        <a href="guides/daam-sakani-guide.html">Daam Sakani Guide</a>
+        <a href="guides/kenitra-vs-rabat.html">Kénitra vs Rabat</a>
+      </div>
+    </li>
+    <li><a href="why-morocco.html">Why Kénitra</a></li>
+    <li><a href="elaf-sky-view.html">Elaf Sky View</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li class="language-switcher" aria-label="Language selection">
+      <a href="about.html" class="active" aria-current="page">EN</a>
+      <a href="fr/about.html">FR</a>
+      <a href="ar/about.html">AR</a>
+    </li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Enquire</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span aria-hidden="true">›</span>
+  <span class="current">Who We Are</span>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background: linear-gradient(to right, rgba(7,17,31,0.94) 0%, rgba(8,26,51,0.72) 55%, rgba(8,26,51,0.18) 100%), url('kenitra1.png') center 40% / cover; opacity: 0.65;" aria-hidden="true"></div>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">Rabat-Salé-Kénitra · Morocco</p>
+      <h1 class="page-hero-title">Real Estate Advisory<br><em>Built From Experience.</em></h1>
+      <p class="page-hero-sub">We help buyers and real estate developers make better decisions in a market where good opportunities are not always easy to see from the outside.</p>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="bg-cream" style="padding: var(--section-pad);">
+    <div class="about-intro-grid">
+      <div>
+        <p class="section-eyebrow">Who We Are</p>
+        <h2 class="section-title" style="color:var(--navy);">Real Estate Advisory<br>and Consulting.</h2>
+        <p class="body-text">Rahim International is a real estate advisory, brokerage, and project strategy firm operating across the Rabat-Salé-Kénitra region, with a focused presence in Kénitra. We work with buyers purchasing from abroad, local investors comparing opportunities, and real estate developers who need commercial strategy, marketing, and sales execution.</p>
+        <div style="margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border);">
+          <p class="section-eyebrow" style="margin-bottom:.6rem;">How We Started</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;color:var(--navy);margin-bottom:1.4rem;line-height:1.2;">We Understand the Process<br>Because We Have Been Through It.</h3>
+          <p class="body-text">Rahim International was not built from a business plan. It was built from a search.</p>
+          <p class="body-text">We went through the Kénitra market as buyers — coordinating from Canada, with limited time on the ground, relying on family to visit properties on our behalf. Over five months of travelling back and forth between Canada and Morocco, we experienced what most MRE buyers face but rarely talk about in detail. Wrong addresses. Offices still listed as active but long since moved. Developers who were never on site for viewings. Advertised prices that applied to one specific undesirable unit. A developer who cancelled a confirmed reservation the morning we arrived with the down payment — because we had asked too many direct questions about how the transaction would be structured.</p>
+          <p class="body-text">We eventually found our developer by process of elimination. We visited the site multiple times while it was still under construction, compared it against every other project we could access, and chose it because it was the only one we could actually verify. We committed our own money before we ever proposed a partnership.</p>
+          <p class="body-text">That conversation happened naturally, over time, after a working relationship had already been established. The developer had a serious product and limited visibility to match it. Good projects in this market routinely reach fewer buyers than they should — not because the building is wrong, but because the infrastructure to present it properly simply does not exist.</p>
+          <p class="body-text" style="margin-bottom:0;">That gap — between what a development deserves and what the market actually sees — is what Rahim International was built to close. We know what it looks like from both sides.</p>
+        </div>
+
+        <div class="pull-quote" style="margin-top: 2.5rem;">
+          <p>"Our role is to make the important parts visible before someone commits serious capital."</p>
+          <cite>Ali Rahim · Founder</cite>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="background: var(--navy); padding: 0; border: 1px solid var(--border-warm); overflow: hidden;">
+          <div style="background: linear-gradient(135deg, rgba(183,106,63,0.18), rgba(8,26,51,0.1)); min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 2.5rem;">
+            <img src="logo.png" alt="Rahim International" style="width: 120px; height: auto; opacity: 0.9;">
+          </div>
+          <div style="padding: 2rem; border-top: 1px solid var(--border-warm);">
+            <div style="font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem;">Our Scope</div>
+            <div style="display: grid; gap: 0.9rem;">
+              <div style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.84rem; color: rgba(255,255,255,0.72);">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0;"></span>
+                Advisory &amp; Research
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.84rem; color: rgba(255,255,255,0.72);">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0;"></span>
+                Brokerage
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.84rem; color: rgba(255,255,255,0.72);">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0;"></span>
+                Project Strategy &amp; Marketing
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.84rem; color: rgba(255,255,255,0.72);">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0;"></span>
+                Developer Sales Support
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM / ALI RAHIM -->
+  <section class="team-section" style="padding: var(--section-pad);">
+    <div>
+      <p class="section-eyebrow">Our Team</p>
+      <h2 class="section-title">Focused, Local,<br>and Accountable.</h2>
+      <p class="body-text">Rahim International is built around practical, on-the-ground work: research, buyer advisory, developer coordination, marketing, and brokerage.</p>
+      <p class="body-text">Our core team is based in Kénitra, where the market is actively managed. We are supported by a representative in Canada for North American clients and one in France for European clients, providing accessible communication while keeping execution anchored locally.</p>
+      <div class="team-locations reveal" style="max-width: 440px; margin-top: 2rem;">
+        <div class="team-location">
+          <div class="team-location-label">Canada</div>
+          <p class="team-location-text">North American client support</p>
+        </div>
+        <div class="team-location">
+          <div class="team-location-label">France</div>
+          <p class="team-location-text">European client support</p>
+        </div>
+      </div>
+    </div>
+    <article class="team-panel reveal">
+      <img src="alirahim.png" alt="Ali Rahim, Founder of Rahim International" class="team-panel-photo">
+      <div class="team-panel-body">
+        <p class="team-role">Founder</p>
+        <h3 class="team-name">Ali Rahim</h3>
+        <p class="team-bio">Based in Kénitra, Ali leads advisory strategy, developer relationships, and mandate direction. He is supported by a small team handling research, marketing, coordination, and client follow-through. The company's name and identity are rooted in Kénitra itself — "the little bridge" — and the Mohammed VI Bridge, a symbol of connection and forward movement.</p>
+        <div class="team-contact-row">
+          <div class="team-contact-item">
+            <div class="team-contact-icon">✉</div>
+            <div>
+              <div class="team-contact-label">Email</div>
+              <div class="team-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+            </div>
+          </div>
+          <div class="team-contact-item">
+            <div class="team-contact-icon">☎</div>
+            <div>
+              <div class="team-contact-label">Phone &amp; WhatsApp</div>
+              <div class="team-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+            </div>
+          </div>
+          <div class="team-contact-item">
+            <div class="team-contact-icon">◎</div>
+            <div>
+              <div class="team-contact-label">Office</div>
+              <div class="team-contact-value">70 Av. Youssef Ben Tachfine, Kénitra 14000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- TEAM EXPERIENCE -->
+  <section class="experience-section" style="padding: var(--section-pad);">
+    <p class="section-eyebrow">Background &amp; Expertise</p>
+    <h2 class="section-title" style="color: var(--navy);">What We Bring<br>to Each Mandate.</h2>
+    <p class="body-text" style="max-width: 680px;">The team's combined experience spans sectors that directly apply to real estate advisory, buyer support, and developer services.</p>
+    <div class="experience-grid stagger">
+      <div class="exp-tag reveal"><div class="exp-icon">🌍</div><div class="exp-label">International Business</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">📊</div><div class="exp-label">Analytical Research</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">📣</div><div class="exp-label">International Marketing</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">🤝</div><div class="exp-label">Cross-Cultural Communication</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">🏠</div><div class="exp-label">Property Management</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">🔑</div><div class="exp-label">Short-Term Rental Management</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">📦</div><div class="exp-label">Global Logistics</div></div>
+      <div class="exp-tag reveal"><div class="exp-icon">🇲🇦</div><div class="exp-label">Direct MRE Experience</div></div>
+    </div>
+  </section>
+
+  <!-- THE BRIDGE / STORY -->
+  <section class="story-section" style="padding: var(--section-pad);">
+    <p class="section-eyebrow">The Bridge</p>
+    <h2 class="section-title">Why It Matters.</h2>
+    <div class="story-grid">
+      <div>
+        <p class="story-text">Our identity is built around connection. Our name is inspired by Kénitra — "the little bridge" — and our logo reflects the Mohammed VI Bridge, a symbol of modern infrastructure and forward movement in Morocco.</p>
+        <div class="story-image reveal" role="img" aria-label="Mohammed VI Bridge in Morocco"></div>
+        <p class="story-text">That idea defines our role. We connect buyers who need clarity with projects that deserve to be properly understood and presented.</p>
+        <div class="story-highlight">
+          <div class="story-highlight-label">For Buyers</div>
+          <div class="story-highlight-text">We focus on protecting time, capital, and decision-making confidence through local verification, structured research, clear explanations, and continued support.</div>
+        </div>
+      </div>
+      <div>
+        <p class="story-text">For real estate developers, we help turn strong projects into clear, well-positioned opportunities: business analysis, market positioning, marketing, presentation, and access to buyers beyond local networks.</p>
+        <p class="story-text">We are not here to make Moroccan real estate more complex. We focus on making the essential elements clear: location, developer credibility, pricing logic, legal structure, build quality, and real use case.</p>
+        <p class="story-text" style="margin-top: 1.2rem;">We work with buyers and developers who are serious about making the right decision, not the fastest one.</p>
+        <div class="story-highlight" style="margin-top: 2rem;">
+          <div class="story-highlight-label">For Real Estate Developers</div>
+          <div class="story-highlight-text">We structure, position, and present projects so the market understands their value — reaching local, diaspora, and international buyers.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BREAK -->
+  <div class="image-break" aria-hidden="true">
+    <div class="image-break-bg"></div>
+    <div class="image-break-overlay"></div>
+    <div class="image-break-content">
+      <p class="image-break-quote">"The right property decision starts with clear information, not pressure."</p>
+    </div>
+  </div>
+
+  <!-- HOW WE WORK -->
+  <section class="values-section" style="padding: var(--section-pad);">
+    <p class="section-eyebrow">How We Work</p>
+    <h2 class="section-title" style="color: var(--navy);">Making Decisions Clearer.</h2>
+    <div class="values-grid stagger">
+      <article class="value-card reveal">
+        <div class="value-num">01</div>
+        <h3 class="value-title">Research Before Recommendation</h3>
+        <p class="value-desc">Every opportunity is reviewed in detail before it is presented to a buyer or developer client.</p>
+      </article>
+      <article class="value-card reveal">
+        <div class="value-num">02</div>
+        <h3 class="value-title">Clear Buyer Protection</h3>
+        <p class="value-desc">Buyers receive the information they need to move forward at their own pace, without pressure.</p>
+      </article>
+      <article class="value-card reveal">
+        <div class="value-num">03</div>
+        <h3 class="value-title">Commercial Strategy for Developers</h3>
+        <p class="value-desc">We help structure, position, and present projects so they reach the right audience effectively.</p>
+      </article>
+      <article class="value-card reveal">
+        <div class="value-num">04</div>
+        <h3 class="value-title">Practical, Well-Priced Real Estate</h3>
+        <p class="value-desc">We focus on real value: clear purpose, sensible entry points, and long-term usability.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta" style="padding: var(--section-pad);">
+    <p class="section-eyebrow">Who We Work With</p>
+    <h2 class="section-title">Start With the Right Conversation.</h2>
+    <p class="cta-sub" style="color: rgba(255,255,255,0.62);">Whether you are buying from abroad, returning home as part of the Moroccan diaspora, investing locally, or developing a project, start with the path that fits you.</p>
+    <div class="cta-actions" style="margin-top: 2.5rem;">
+      <a href="investors-international.html" class="btn-gold">International Buyers</a>
+      <a href="investors-mre.html" class="btn-outline">Diaspora / MRE</a>
+      <a href="investors-local.html" class="btn-outline">Local Buyers</a>
+      <a href="services-developers.html" class="btn-outline">Developer Services</a>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact-section" style="padding:var(--section-pad);" id="contact">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title" style="color:var(--white);">Tell Us What You Are<br>Trying to Buy or Build.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:640px;margin-top:.8rem;margin-bottom:3.5rem;">Whether you are comparing properties, buying from abroad, returning home, or bringing a development to market, the right next step depends on your situation. Tell us what you are working on and we will respond with the most relevant path forward.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <div class="contact-item-label">Phone &amp; WhatsApp</div>
+              <div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <div class="contact-item-label">Headquarters</div>
+              <div class="contact-item-value">70 Av. Youssef Ben Tachfine,<br>Kénitra 14000, Morocco</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
+          <input type="hidden" name="subject" value="Enquiry from RahimInternational.com">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First Name</label>
+              <input id="first-name" name="first_name" type="text" class="form-input" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last Name</label>
+              <input id="last-name" name="last_name" type="text" class="form-input" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profile">I am a</label>
+            <select id="profile" name="profile" class="form-select" required>
+              <option value="">Select your profile</option>
+              <option>Real Estate Developer seeking a sales partner</option>
+              <option>International investor</option>
+              <option>Moroccan diaspora / MRE buyer</option>
+              <option>Local investor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you are working on…"></textarea>
+          </div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="form-submit">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Rahim International" class="footer-brand-logo">
+      <span class="brand-name" style="margin-top: 0.5rem;">Rahim <span>International</span></span>
+      <p class="footer-tagline">Real estate advisory and consulting for buyers and developers in the Rabat-Salé-Kénitra market.</p>
+    </div>
+    <div>
+      <div class="footer-col-label">Navigate</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="why-morocco.html">Why Kénitra</a>
+        <a href="elaf-sky-view.html">Elaf Sky View</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Buyers &amp; Guides</div>
+      <div class="footer-links">
+        <a href="investors-international.html">International Buyers</a>
+        <a href="investors-mre.html">MRE Buyers</a>
+        <a href="investors-local.html">Local Buyers</a>
+        <a href="services-developers.html">Developer Services</a>
+        <a href="guides/index.html">Buying Guides</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-label">Contact</div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">✉</div>
+        <div>
+          <div class="footer-contact-label">Email</div>
+          <div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">☎</div>
+        <div>
+          <div class="footer-contact-label">Phone &amp; WhatsApp</div>
+          <div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-icon">◎</div>
+        <div>
+          <div class="footer-contact-label">Address</div>
+          <div class="footer-contact-value">70 Av. Youssef Ben Tachfine,<br>Kénitra 14000, Morocco</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rahim International. All rights reserved.</div>
+    <div class="footer-langs">
+      <a href="about.html" class="active">EN</a>
+      <a href="fr/about.html">FR</a>
+      <a href="ar/about.html">AR</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-buttons" aria-label="Quick actions">
+  <a href="https://wa.me/212642773249?text=Hello%2C%20I'd%20like%20to%20inquire%20about%20your%20real%20estate%20advisory%20services." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button class="btn-back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

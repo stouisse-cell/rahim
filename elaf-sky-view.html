@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elaf Sky View | Apartments in Central Kénitra | Rahim International</title>
+<meta name="description" content="Elaf Sky View — 35 residential apartments in central Kénitra. High-spec finishes, energy-ready infrastructure, titled parking, selected Daam Sakani eligibility, 11,500 MAD/m².">
+<link rel="canonical" href="https://rahiminternational.com/elaf-sky-view.html">
+<link rel="alternate" hreflang="en" href="https://rahiminternational.com/elaf-sky-view.html">
+<link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/elaf-sky-view.html">
+<link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/elaf-sky-view.html">
+<link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/elaf-sky-view.html">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:title" content="Elaf Sky View Kénitra | Rahim International">
+<meta property="og:description" content="35 apartments in central Kénitra. High-spec finishes, energy-ready infrastructure, selected Daam eligibility. 61–108 m² · 11,500 MAD/m².">
+<meta property="og:image" content="https://rahiminternational.com/elaf.jpg">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ApartmentComplex","name":"Elaf Sky View","address":{"@type":"PostalAddress","addressLocality":"Kénitra","addressCountry":"MA"},"numberOfRooms":35,"floorSize":{"@type":"QuantitativeValue","minValue":61,"maxValue":108,"unitCode":"MTK"},"description":"35-unit residential development in central Kénitra with high-spec finishes, energy-ready infrastructure, and selected Daam Sakani eligibility."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="shared.css">
+<style>
+  /* ---- Elaf page-specific ---- */
+  .elaf-hero {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 9rem 5% 5rem;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .elaf-hero-bg {
+    position: absolute; inset: 0;
+    background: url('elaf.jpg') center / cover;
+    opacity: 0.65;
+    z-index: 1;
+  }
+  .elaf-hero-overlay {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 72% 25%, rgba(183,106,63,0.16), transparent 30%),
+      linear-gradient(to right, rgba(7,17,31,0.96) 0%, rgba(8,26,51,0.72) 50%, rgba(8,26,51,0.28) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 2;
+  }
+  .elaf-hero-pattern {
+    position: absolute; inset: 0;
+    z-index: 3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px);
+  }
+  .elaf-hero-content {
+    position: relative;
+    z-index: 4;
+    max-width: 900px;
+  }
+  .elaf-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .elaf-hero-title em { font-style: italic; color: var(--gold); }
+  .elaf-hero-sub {
+    font-size: 0.96rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.7);
+    max-width: 660px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Quick facts */
+  .facts-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .fact-item {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+    min-height: 120px;
+  }
+  .fact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .fact-label {
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+    line-height: 1.45;
+  }
+
+  /* Gallery */
+  .gallery-wrap {
+    position: relative;
+    min-height: 380px;
+    background: var(--navy);
+    overflow: hidden;
+  }
+  .gallery-slide {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.5s ease;
+  }
+  .gallery-slide.is-active { opacity: 1; }
+  .gallery-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(8,26,51,0.75) 0%, transparent 55%);
+    z-index: 1;
+  }
+  .gallery-btn {
+    position: absolute;
+    top: 50%; z-index: 3;
+    width: 42px; height: 42px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(7,17,31,0.55);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .gallery-btn:hover { background: var(--copper); border-color: var(--copper); }
+  .gallery-prev { left: 1rem; }
+  .gallery-next { right: 1rem; }
+  .gallery-dots {
+    position: absolute;
+    right: 1.5rem; bottom: 1.5rem;
+    z-index: 3;
+    display: flex;
+    gap: 0.4rem;
+  }
+  .gallery-dot {
+    width: 8px; height: 8px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+  }
+  .gallery-dot.is-active { background: var(--gold); border-color: var(--gold); }
+  .gallery-label {
+    position: absolute;
+    bottom: 1.5rem; left: 1.5rem;
+    z-index: 3;
+  }
+  .gallery-location {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+  .gallery-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  /* Project overview */
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+  .tag {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 0.28rem 0.75rem;
+    color: var(--text-muted);
+  }
+  .project-kpis {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .project-kpi-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+  .project-kpi-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  /* Spec grid */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line-dark);
+    margin-top: 3.5rem;
+  }
+  .spec-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2.2rem 2rem;
+  }
+  .spec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+  }
+  .spec-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.62);
+  }
+
+  /* Location section */
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .location-item {
+    border-left: 2px solid var(--copper);
+    padding-left: 1.2rem;
+  }
+  .location-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .location-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.64);
+  }
+
+  /* Unit types */
+  .unit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+  }
+  .unit-card {
+    background: var(--white);
+    padding: 2.2rem 2rem;
+  }
+  .unit-tag {
+    display: inline-flex;
+    margin-bottom: 1.2rem;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+    border: 1px solid rgba(183,106,63,0.22);
+    padding: 0.25rem 0.7rem;
+  }
+  .unit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+  }
+  .unit-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  /* Buyer fit */
+  .buyer-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--line-dark);
+    margin-top: 3rem;
+  }
+  .buyer-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2.2rem 2rem;
+    transition: background 0.3s;
+  }
+  .buyer-card:hover { background: rgba(255,255,255,0.08); }
+  .buyer-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: rgba(183,106,63,0.4);
+    line-height: 1;
+    margin-bottom: 0.9rem;
+  }
+  .buyer-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+  }
+  .buyer-card-text {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.58);
+  }
+  .buyer-card-link {
+    display: inline-flex;
+    margin-top: 1.2rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(210,180,134,0.3);
+    padding-bottom: 0.2rem;
+    transition: color 0.3s;
+  }
+  .buyer-card-link:hover { color: var(--copper); border-color: var(--copper); }
+
+  /* Investment panels */
+  .invest-panel {
+    border: 1px solid var(--border-warm);
+    padding: 2.2rem 2.5rem;
+    background: rgba(255,255,255,0.04);
+    margin-bottom: 1.2rem;
+  }
+  .invest-panel:last-child { margin-bottom: 0; }
+  .invest-kicker {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.8rem;
+  }
+  .invest-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--white);
+  }
+
+  /* Contact section */
+  .contact-info { display: grid; gap: 1.5rem; margin-bottom: 2.5rem; }
+  .contact-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .contact-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--copper);
+    font-size: 0.85rem;
+  }
+  .contact-item-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.2rem;
+  }
+  .contact-item-value,
+  .contact-item-value a {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+  }
+
+  @media (max-width: 1180px) {
+    .facts-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .spec-grid { grid-template-columns: 1fr 1fr; }
+    .unit-grid { grid-template-columns: 1fr 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 680px) {
+    .elaf-hero-title { font-size: clamp(2.4rem, 13vw, 3.5rem); }
+    .facts-grid { grid-template-columns: 1fr 1fr; }
+    .spec-grid,
+    .unit-grid,
+    .buyer-fit-grid { grid-template-columns: 1fr; }
+    .project-kpis { gap: 1.5rem; }
+    .project-kpis > div { min-width: calc(50% - 0.75rem); }
+  }
+</style>
+</head>
+<body>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="index.html" class="brand" aria-label="Rahim International home">
+    <img src="logo.png" alt="" class="brand-logo" aria-hidden="true">
+    <span class="brand-text">
+      <span class="brand-name">Rahim <span>International</span></span>
+      <span class="brand-subtitle">Real Estate Advisory &amp; Consulting</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Who We Are</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buyers</button>
+      <div class="nav-dropdown-menu">
+        <a href="investors-international.html">International Buyers</a>
+        <a href="investors-mre.html">MRE Buyers</a>
+        <a href="investors-local.html">Local Buyers</a>
+      </div>
+    </li>
+    <li><a href="services-developers.html">Developer Services</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">Buying Guides</button>
+      <div class="nav-dropdown-menu">
+        <a href="guides/index.html">Buying Guides Overview</a>
+        <a href="guides/buying-property-morocco.html">Buying Property in Morocco</a>
+        <a href="guides/daam-sakani-guide.html">Daam Sakani Guide</a>
+        <a href="guides/kenitra-vs-rabat.html">Kénitra vs Rabat</a>
+      </div>
+    </li>
+    <li><a href="why-morocco.html">Why Kénitra</a></li>
+    <li><a href="elaf-sky-view.html" class="active" aria-current="page">Elaf Sky View</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li class="language-switcher">
+      <a href="elaf-sky-view.html" class="active">EN</a>
+      <a href="fr/elaf-sky-view.html">FR</a>
+      <a href="ar/elaf-sky-view.html">AR</a>
+    </li>
+  </ul>
+  <a href="#contact" class="nav-cta">Request Details</a>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <span class="current">Elaf Sky View</span>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="elaf-hero">
+    <div class="elaf-hero-bg" aria-hidden="true"></div>
+    <div class="elaf-hero-overlay" aria-hidden="true"></div>
+    <div class="elaf-hero-pattern" aria-hidden="true"></div>
+    <div class="elaf-hero-content">
+      <p class="page-hero-eyebrow">Current Opportunity · Kénitra Centre Ville</p>
+      <h1 class="elaf-hero-title">Elaf Sky View<br><em>Built to a Higher Standard. Priced for the Real Market.</em></h1>
+      <p class="elaf-hero-sub">A 35-unit residential development in central Kénitra combining high-spec finishes, energy-ready infrastructure, titled parking, selected Daam Sakani eligibility, and a location built for daily life.</p>
+      <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+        <a href="#contact" class="btn-primary">Request Full Details</a>
+        <a href="elaf-sky-view-brochure.pdf" class="btn-outline" target="_blank" rel="noopener">Download Brochure</a>
+        <a href="#gallery" class="btn-outline">View Gallery</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK FACTS -->
+  <div class="facts-strip">
+    <div class="facts-grid">
+      <div class="fact-item"><div class="fact-value">35</div><div class="fact-label">Residential apartments</div></div>
+      <div class="fact-item"><div class="fact-value">61–108 m²</div><div class="fact-label">Unit size range</div></div>
+      <div class="fact-item"><div class="fact-value">11,500</div><div class="fact-label">MAD per square metre</div></div>
+      <div class="fact-item"><div class="fact-value">6</div><div class="fact-label">Floors in central Kénitra</div></div>
+      <div class="fact-item"><div class="fact-value">10 min</div><div class="fact-label">Walk to Kénitra TGV station</div></div>
+      <div class="fact-item"><div class="fact-value">5 min</div><div class="fact-label">Drive to motorway</div></div>
+      <div class="fact-item"><div class="fact-value">1</div><div class="fact-label">Titled parking stall per unit</div></div>
+      <div class="fact-item"><div class="fact-value">Daam</div><div class="fact-label">Selected units may qualify</div></div>
+    </div>
+  </div>
+
+  <!-- GALLERY & PROJECT OVERVIEW -->
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Project Overview</p>
+    <h2 class="section-title" style="color:var(--navy);">High-Spec Apartments<br>in Centre Ville Kénitra.</h2>
+    <p style="font-size:0.92rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:660px;margin-bottom:3rem;">Elaf Sky View introduces thoughtfully designed apartments in one of Morocco's fastest-growing cities, with a rare balance of affordable luxury, practical infrastructure, and everyday convenience.</p>
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,0.7fr);gap:3rem;align-items:start;">
+      <div>
+        <div id="gallery" class="gallery-wrap" data-gallery style="border:1px solid var(--border);">
+          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active">
+          <img src="elaf-interior.png" alt="Elaf Sky View apartment interior finishes" class="gallery-slide">
+          <img src="elaf-kitchen.png" alt="Elaf Sky View fully equipped kitchen" class="gallery-slide">
+          <img src="elaf-location.png" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide">
+          <div class="gallery-img-overlay" aria-hidden="true"></div>
+          <button class="gallery-btn gallery-prev" type="button" aria-label="Previous photo">‹</button>
+          <button class="gallery-btn gallery-next" type="button" aria-label="Next photo">›</button>
+          <div class="gallery-dots" aria-label="Photo gallery navigation">
+            <button class="gallery-dot is-active" type="button" aria-label="Photo 1"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 2"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 3"></button>
+            <button class="gallery-dot" type="button" aria-label="Photo 4"></button>
+          </div>
+          <div class="gallery-label">
+            <div class="gallery-location">Kénitra · City Centre</div>
+            <div class="gallery-name">Elaf Sky View</div>
+          </div>
+        </div>
+        <div class="project-tags" style="margin-top:1.2rem;">
+          <span class="tag">Apartments</span>
+          <span class="tag">Centre Ville</span>
+          <span class="tag">Energy Ready</span>
+          <span class="tag">High-Spec Finishes</span>
+          <span class="tag">Daam Sakani Eligible</span>
+          <span class="tag">Active Mandate</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Located in Centre Ville, in a well-established green neighbourhood beside a public garden, Elaf Sky View places residents about 10 minutes on foot from the TGV station and 5 minutes by car from the motorway.</p>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">Designed for both rental income and long-term living, each unit includes air-conditioning pre-installation, double-insulated windows and glass doors, Turkish-imported doors with triple deadbolt systems, fully equipped kitchens, and built-in shower seating.</p>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);">Each apartment also benefits from private rooftop space for future solar panels, directly connected to the unit. Underground parking is assigned to each apartment and included in the property title.</p>
+        <div class="project-kpis">
+          <div><div class="project-kpi-label">Total Units</div><div class="project-kpi-value">35</div></div>
+          <div><div class="project-kpi-label">Size Range</div><div class="project-kpi-value">61–108 m²</div></div>
+          <div><div class="project-kpi-label">Price</div><div class="project-kpi-value">11,500 MAD/m²</div></div>
+          <div><div class="project-kpi-label">Floors</div><div class="project-kpi-value">6</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD QUALITY -->
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Build Quality</p>
+    <h2 class="section-title" style="color:var(--white);">The Difference Is<br>in the Specification.</h2>
+    <p style="font-size:0.92rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.65);max-width:660px;margin-bottom:0.5rem;">At this price point, the details matter. Elaf Sky View is designed to feel more finished, more efficient, and more secure than the standard middle-market apartment.</p>
+    <div class="spec-grid stagger">
+      <article class="spec-card reveal"><h3 class="spec-title">Solar Ready</h3><p class="spec-text">Each unit has private rooftop allocation for future solar panels, pre-installed and directly connected to the apartment's electricity input and its underground parking stall.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Comfort Infrastructure</h3><p class="spec-text">Air-conditioning pre-installation and double-insulated windows and glass doors improve comfort, noise control, and energy efficiency significantly.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Security &amp; Doors</h3><p class="spec-text">Front and interior doors are imported from Turkey, with triple deadbolt systems on the main doors for added confidence and daily security.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Equipped Kitchens</h3><p class="spec-text">Apartments include fully equipped kitchens, reducing setup work for owners buying for personal use or rental readiness from day one.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Finished Bathrooms</h3><p class="spec-text">Built-in shower seating adds comfort and usability — especially for family use, older relatives, and long-stay residents.</p></article>
+      <article class="spec-card reveal"><h3 class="spec-title">Interior Finish</h3><p class="spec-text">Flooring, paint, wall panelling, and finish selections deliver a more refined feel without moving into luxury pricing territory.</p></article>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div style="min-height:420px;background:var(--navy-mid);border:1px solid var(--border-warm);overflow:hidden;position:relative;" class="reveal">
+        <img src="elaf-map.png" alt="Map showing Elaf Sky View location in Centre Ville Kénitra" style="width:100%;height:100%;object-fit:cover;min-height:420px;">
+      </div>
+      <div>
+        <p class="section-eyebrow">Location</p>
+        <h2 class="section-title" style="color:var(--white);">Centre Ville Convenience.<br>Connected to the Region.</h2>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.65);margin-bottom:2rem;">The project sits in a mature, green part of central Kénitra, beside a public garden and within walking distance of everyday amenities. This matters for residents, tenants, and families who want a property that works beyond the first purchase conversation.</p>
+        <div class="location-grid">
+          <div class="location-item reveal"><h3 class="location-title">TGV Access</h3><p class="location-text">Around 10 minutes on foot from Kénitra's high-speed rail station.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Motorway Access</h3><p class="location-text">Around 5 minutes by car for Rabat, Salé, Casablanca, and Tangier routes.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Daily Amenities</h3><p class="location-text">Shops, services, cafes, schools, and daily needs close by in a central setting.</p></div>
+          <div class="location-item reveal"><h3 class="location-title">Green Surroundings</h3><p class="location-text">Established urban fabric with greenery nearby — not an isolated outer-edge development.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYER FIT -->
+  <section class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Buyer Fit</p>
+    <h2 class="section-title" style="color:var(--white);">Different Buyers.<br>Different Reasons to Look.</h2>
+    <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.63);max-width:640px;margin-bottom:0.5rem;">Elaf Sky View is not one generic pitch. Different unit types can serve different buyer profiles — from first-time buyers and MRE families to local investors and foreign nationals relocating to Morocco.</p>
+    <div class="buyer-fit-grid stagger">
+      <article class="buyer-card reveal"><div class="buyer-card-num">01</div><h3 class="buyer-card-title">International Buyers</h3><p class="buyer-card-text">A central Kénitra base for relocation planning, long-term living, rental income, or managed Moroccan property exposure.</p><a href="investors-international.html" class="buyer-card-link">International Buyer Path</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">02</div><h3 class="buyer-card-title">MRE Buyers</h3><p class="buyer-card-text">A second home, family base, rental investment, or future return property — with support while you are abroad.</p><a href="investors-mre.html" class="buyer-card-link">MRE Buyer Path</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">03</div><h3 class="buyer-card-title">Local Buyers</h3><p class="buyer-card-text">A connected second-city opportunity comparing Rabat-area affordability, rental use, and long-term value.</p><a href="investors-local.html" class="buyer-card-link">Local Buyer Path</a></article>
+      <article class="buyer-card reveal"><div class="buyer-card-num">04</div><h3 class="buyer-card-title">Daam Buyers</h3><p class="buyer-card-text">Selected units may qualify for Daam Sakani — giving eligible buyers access to a premium building at a more accessible entry point.</p><a href="guides/daam-sakani-guide.html" class="buyer-card-link">Read Daam Guide</a></article>
+    </div>
+  </section>
+
+  <!-- UNIT STRATEGY -->
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Unit Strategy</p>
+    <h2 class="section-title" style="color:var(--navy);">Choose the Unit<br>Based on the Use Case.</h2>
+    <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:640px;margin-bottom:0.5rem;">The right unit depends on how you plan to use it: living, renting, returning, qualifying for subsidy support, or holding for long-term value.</p>
+    <div class="unit-grid stagger">
+      <article class="unit-card reveal"><span class="unit-tag">Entry Strategy</span><h3 class="unit-title">Daam-Eligible Units</h3><p class="unit-text">For eligible buyers, selected units create a more accessible entry point into a better-quality building. Eligibility and obligations should be confirmed before reserving.</p></article>
+      <article class="unit-card reveal"><span class="unit-tag">Family Use</span><h3 class="unit-title">Larger Residences</h3><p class="unit-text">The larger layouts suit second homes, family stays, long-term living, or buyers preparing a future return to Morocco.</p></article>
+      <article class="unit-card reveal"><span class="unit-tag">Rental Logic</span><h3 class="unit-title">Investor-Friendly Units</h3><p class="unit-text">For rental-focused buyers: unit size, furnishing cost, tenant profile, management structure, and whether the location supports regular demand.</p></article>
+    </div>
+  </section>
+
+  <!-- INVESTMENT CASE -->
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Investment Case</p>
+        <h2 class="section-title" style="color:var(--white);">Why Kénitra,<br>Why Now.</h2>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.64);margin-bottom:1.2rem;">Kénitra is not Rabat — and that is part of the point. Buyers priced out of the capital, families seeking more space, and investors looking for stronger entry pricing can all find a more practical conversation in connected second cities.</p>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.64);margin-bottom:2rem;">Elaf Sky View sits inside that opportunity: central location, strong transport access, practical unit sizes, and a specification level that helps the project stand out.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.9rem;">
+          <a href="guides/kenitra-vs-rabat.html" style="font-size:0.66rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid rgba(210,180,134,0.3);padding:0.7rem 1rem;transition:background 0.3s,color 0.3s;" onmouseover="this.style.background='var(--copper)';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='var(--gold)';">Kénitra vs Rabat</a>
+          <a href="guides/buying-property-morocco.html" style="font-size:0.66rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid rgba(210,180,134,0.3);padding:0.7rem 1rem;transition:background 0.3s,color 0.3s;" onmouseover="this.style.background='var(--copper)';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='var(--gold)';">Buying in Morocco</a>
+          <a href="guides/preconstruction-guide.html" style="font-size:0.66rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid rgba(210,180,134,0.3);padding:0.7rem 1rem;transition:background 0.3s,color 0.3s;" onmouseover="this.style.background='var(--copper)';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='var(--gold)';">Pre-Construction Guide</a>
+        </div>
+      </div>
+      <div>
+        <div class="invest-panel reveal"><p class="invest-kicker">For Rabat-area buyers</p><h3 class="invest-title">Own in a connected city while staying within reach of the capital.</h3></div>
+        <div class="invest-panel reveal"><p class="invest-kicker">For MRE buyers</p><h3 class="invest-title">A base back home that can serve family use, rental strategy, or long-term return planning.</h3></div>
+        <div class="invest-panel reveal"><p class="invest-kicker">For international buyers</p><h3 class="invest-title">A practical entry into Morocco outside the fully priced tourist markets.</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR ROLE -->
+  <section class="bg-cream" style="padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Rahim International</p>
+        <h2 class="section-title" style="color:var(--navy);">We Help You Read<br>the Project Properly.</h2>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">We found Elaf Sky View the same way you might — as buyers, coordinating from Canada, spending five months travelling back and forth between Canada and Morocco, visiting projects, and comparing everything we could access. We chose this developer because he was the only one whose project we could actually verify. We committed our own money before we proposed a mandate. We are owners in this building.</p>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem;">That means when we help you evaluate Elaf Sky View, we are not reading from a spec sheet. We followed the construction from exposed bricks through to completion. We know the developer directly. We know the build quality, the location at different times of day, and what the project looks like compared to everything else available in the market.</p>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:var(--text-muted);">Our role is to make the decision easier — comparing unit types, explaining the price-quality ratio, coordinating with the developer, and keeping the process organised for buyers who cannot be on the ground at every stage.</p>
+      </div>
+      <div>
+        <div class="unit-grid" style="grid-template-columns:1fr;">
+          <article class="unit-card reveal"><span class="unit-tag">01</span><h3 class="unit-title">Unit Selection</h3><p class="unit-text">We help match budget, unit size, use case, and buyer profile to the right option.</p></article>
+          <article class="unit-card reveal"><span class="unit-tag">02</span><h3 class="unit-title">Project Review</h3><p class="unit-text">We clarify finishes, pricing, delivery, eligibility, and the questions that matter before reservation.</p></article>
+          <article class="unit-card reveal"><span class="unit-tag">03</span><h3 class="unit-title">Follow-Through</h3><p class="unit-text">We keep the process organised from first enquiry through the next serious step.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" style="background:var(--navy);padding:var(--section-pad);">
+    <div class="split split-center">
+      <div>
+        <p class="section-eyebrow">Request Details</p>
+        <h2 class="section-title" style="color:var(--white);">Want the Full<br>Elaf Sky View File?</h2>
+        <p style="font-size:0.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,0.64);margin-bottom:2.5rem;">Tell us whether you are buying for residence, rental income, Daam eligibility, relocation, or long-term investment. We will send the right information and explain which unit type fits your objective.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <div><div class="contact-item-label">Phone &amp; WhatsApp</div><div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div><div class="contact-item-label">Address</div><div class="contact-item-value">70 Av. Youssef Ben Tachfine, Kénitra 14000, Morocco</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST">
+          <input type="hidden" name="subject" value="Elaf Sky View enquiry">
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="first-name">First Name</label><input id="first-name" name="first_name" type="text" class="form-input" placeholder="Your first name" required></div>
+            <div class="form-group"><label class="form-label" for="last-name">Last Name</label><input id="last-name" name="last_name" type="text" class="form-input" placeholder="Your last name" required></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="email">Email</label><input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" required></div>
+          <div class="form-group"><label class="form-label" for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" class="form-input" placeholder="+1 or +33 or +212…"></div>
+          <div class="form-group">
+            <label class="form-label" for="profile">I am a</label>
+            <select id="profile" name="profile" class="form-select" required>
+              <option value="">Select your profile</option>
+              <option>International buyer</option>
+              <option>MRE buyer</option>
+              <option>Local buyer / investor</option>
+              <option>Daam Sakani buyer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label" for="message">Message</label><textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you want to know about Elaf Sky View…"></textarea></div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="form-submit">Request Full Details</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Rahim International" class="footer-brand-logo">
+      <span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span>
+      <p class="footer-tagline">Real estate advisory and consulting for buyers and developers in the Rabat-Salé-Kénitra market.</p>
+    </div>
+    <div><div class="footer-col-label">Navigate</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">Who We Are</a><a href="why-morocco.html">Why Kénitra</a><a href="elaf-sky-view.html">Elaf Sky View</a><a href="index.html#contact">Contact</a></div></div>
+    <div><div class="footer-col-label">Buyers &amp; Guides</div><div class="footer-links"><a href="investors-international.html">International Buyers</a><a href="investors-mre.html">MRE Buyers</a><a href="investors-local.html">Local Buyers</a><a href="services-developers.html">Developer Services</a><a href="guides/index.html">Buying Guides</a></div></div>
+    <div><div class="footer-col-label">Contact</div><div class="footer-contact-item"><div class="footer-contact-icon">✉</div><div><div class="footer-contact-label">Email</div><div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div></div><div class="footer-contact-item"><div class="footer-contact-icon">☎</div><div><div class="footer-contact-label">Phone &amp; WhatsApp</div><div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div></div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rahim International. All rights reserved.</div>
+    <div class="footer-langs"><a href="elaf-sky-view.html" class="active">EN</a><a href="fr/elaf-sky-view.html">FR</a><a href="ar/elaf-sky-view.html">AR</a></div>
+  </div>
+</footer>
+
+<div class="float-buttons">
+  <a href="https://wa.me/212642773249?text=Hello%2C%20I'd%20like%20to%20inquire%20about%20your%20real%20estate%20advisory%20services." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button class="btn-back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

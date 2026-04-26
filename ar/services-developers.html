@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خدمات المطورين | التسويق والمبيعات العقارية في المغرب | Rahim International</title>
+<meta name="description" content="تساعد Rahim International المطورين العقاريين المغاربة في تحليل الأعمال، وتحديد مكانة المشاريع، والتسويق، وتنفيذ المبيعات عبر منطقة الرباط-سلا-القنيطرة.">
+<link rel="canonical" href="https://rahiminternational.com/ar/services-developers.html">
+<link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-developers.html">
+<link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/services-developers.html">
+<link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/services-developers.html">
+<link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/services-developers.html">
+<link rel="icon" type="image/png" href="../logo.png">
+<meta property="og:title" content="المطورون العقاريون | Rahim International">
+<meta property="og:description" content="لسنا مجرد وسيط، بل شريك تجاري. نساعد المطورين على تحويل المشاريع القوية إلى فرص واضحة وذات مكانة جيدة في السوق.">
+<meta property="og:image" content="https://rahiminternational.com/preconstruction-site.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../shared.css">
+<style>
+  .intro-text{font-size:0.92rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:720px;margin-bottom:2.5rem;}
+  .dark-intro{color:rgba(255,255,255,0.65);}
+  .mandate-intro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,0.75fr);gap:5rem;align-items:start;}
+  .diff-cards{display:grid;gap:1.2rem;}
+  .diff-card{background:var(--white);border:1px solid var(--border);padding:1.8rem 2rem;position:relative;}
+  .diff-card::before{content:'';position:absolute;top:0;right:0;width:3px;height:100%;background:var(--copper);left:auto;}
+  .diff-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--navy);line-height:1;margin-bottom:0.35rem;}
+  .diff-label{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);}
+  .dev-services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(210,180,134,0.16);margin-top:3rem;}
+  .dev-service-card{background:var(--navy);padding:2.4rem 2rem;transition:background 0.3s;}
+  .dev-service-card:hover{background:var(--navy-mid);}
+  .dev-service-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:rgba(210,180,134,0.22);line-height:1;margin-bottom:1rem;}
+  .dev-service-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);margin-bottom:0.9rem;line-height:1.3;}
+  .dev-service-desc{font-size:0.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.58);}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:3.5rem;}
+  .process-step{background:var(--white);padding:2.2rem 1.8rem;transition:background 0.3s,transform 0.3s;}
+  .process-step:hover{background:var(--cream);transform:translateY(-2px);}
+  .process-step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:rgba(183,106,63,0.3);line-height:1;margin-bottom:1rem;}
+  .process-step-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--navy);margin-bottom:0.7rem;line-height:1.3;}
+  .process-step-desc{font-size:0.84rem;font-weight:300;line-height:1.8;color:var(--text-muted);}
+  .terms-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;}
+  .terms-block{border:1px solid rgba(210,180,134,0.22);padding:2.5rem;background:rgba(255,255,255,0.03);}
+  .terms-block-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--gold);margin-bottom:1.5rem;line-height:1.3;}
+  .terms-list{display:grid;gap:1rem;}
+  .terms-item{display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:1px solid rgba(210,180,134,0.1);}
+  .terms-item:last-child{border-bottom:none;padding-bottom:0;}
+  .terms-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:0.6rem;flex-shrink:0;}
+  .terms-text{font-size:0.84rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.64);}
+  .terms-text strong{font-weight:500;color:var(--white);}
+  .dark-cta{background:var(--ink);text-align:center;}
+  .dark-cta .section-title{color:var(--white);}
+  .dark-cta .section-eyebrow{justify-content:center;}
+  @media(max-width:1180px){.process-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:900px){.mandate-intro-grid,.terms-grid{grid-template-columns:1fr;gap:3rem;}}
+  @media(max-width:680px){.process-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="progress-bar" aria-hidden="true"></div>
+<nav class="site-nav" aria-label="الملاحة الرئيسية">
+  <a href="index.html" class="brand" aria-label="Rahim International الصفحة الرئيسية">
+    <img src="../logo.png" alt="" class="brand-logo" aria-hidden="true">
+    <span class="brand-text"><span class="brand-name">Rahim <span>International</span></span><span class="brand-subtitle">الاستشارات العقارية</span></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li>
+    <li class="nav-dropdown"><button class="nav-dropdown-toggle" type="button" aria-haspopup="true">المشترون</button><div class="nav-dropdown-menu"><a href="investors-international.html">المشترون الدوليون</a><a href="investors-mre.html">مغاربة العالم (MRE)</a><a href="investors-local.html">المشترون المحليون</a></div></li>
+    <li><a href="services-developers.html" class="active" aria-current="page">خدمات المطورين</a></li><li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">أدلة الشراء</button>
+      <div class="nav-dropdown-menu">
+        <a href="guides/index.html">نظرة عامة على أدلة الشراء</a>
+        <a href="guides/buying-property-morocco.html">شراء العقارات في المغرب</a>
+        <a href="guides/daam-sakani-guide.html">دليل Daam Sakani</a>
+        <a href="guides/kenitra-vs-rabat.html">القنيطرة مقابل الرباط</a>
+      </div>
+    </li><li><a href="why-morocco.html">لماذا القنيطرة</a></li><li><a href="elaf-sky-view.html">Elaf Sky View</a></li><li><a href="index.html#contact">اتصل بنا</a></li>
+    <li class="language-switcher"><a href="../services-developers.html">EN</a><a href="../fr/services-developers.html">FR</a><a href="services-developers.html" class="active">AR</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">استفسر الآن</a>
+</nav>
+<nav class="breadcrumb"><a href="index.html">الرئيسية</a><span>›</span><span class="current">خدمات المطورين</span></nav>
+<main>
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background:linear-gradient(to left,rgba(7,17,31,0.94) 0%,rgba(8,26,51,0.72) 55%,rgba(8,26,51,0.18) 100%),url('../preconstruction-site.png') center/cover;opacity:0.65;" aria-hidden="true"></div>
+    <div class="page-hero-fade" aria-hidden="true"></div>
+    <div class="page-hero-pattern" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow">المطورون العقاريون</p>
+      <h1 class="page-hero-title">لقد بنيت شيئًا جادًا.<br><em>إنه يستحق أن يُباع بهذه الطريقة.</em></h1>
+      <p class="page-hero-sub">نعمل كشريك تجاري — نبني الحجة لمشروعك، ونعرضه على الجمهور المناسب، ونتابع حتى يتم بيع الوحدات. المطور يبني، ونحن نتأكد من أن السوق يراه بوضوح.</p>
+    </div>
+  </section>
+
+  <!-- NOT A BROKER -->
+  <section class="bg-steel" style="padding:var(--section-pad);">
+    <div class="mandate-intro-grid">
+      <div>
+        <p class="section-eyebrow">نهجنا</p>
+        <h2 class="section-title" style="color:var(--navy);">لسنا مجرد وسيط،<br>بل شريك تجاري.</h2>
+        <p class="intro-text">في السوق المتوسط في القنيطرة، تتعرض المشاريع القوية باستمرار لضعف الأداء التجاري. ليس لأن المنتج خاطئ — ولكن لأن البنية التحتية للمبيعات المحيطة به ليست مبنية للوصول إلى المشترين الذين سيشترون بالفعل.</p>
+        <p class="intro-text">المشتري المتحمس الذي يبحث عن شقة عالية الجودة في وسط المدينة سيجد تصميمات مبهمة تم إنشاؤها بالذكاء الاصطناعي على Instagram دون مخطط طابق، ولا سعر، ولا وسيلة اتصال فعالة. وإذا أصر — بزيارة مواقع البناء شخصيًا، ومطاردة عناوين المكاتب التي انتقلت، والانتظار في الموقع لوكيل مبيعات لا يظهر أبدًا — فقد يصل في النهاية إلى مشروعك. معظمهم لا يصل إلى هذا الحد. والذين يصلون غالبًا لا يستطيعون تقييم المشروع بشكل صحيح لأنه لا يوجد شيء يقارنونه به.</p>
+        <p class="intro-text">نحن نعرف ذلك لأننا كنا ذلك المشتري. قضينا خمسة أشهر في التنقل بين كندا والمغرب، نزور المشاريع، ونتحقق من المطورين، ونتنقل في سوق لم تكن فيه المعلومات المطلوبة لاتخاذ قرار جاد منظمة ببساطة. لقد اخترنا المطور الذي تشاركنا معه في النهاية لأنه كان الوحيد الذي يمكننا التحقق من مشروعه بالفعل. لقد استثمرنا أموالنا الخاصة قبل أن نقترح التفويض.</p>
+        <p class="intro-text">هذه التجربة هي ما يقوم عليه جانب المطورين في هذا العمل. نحن لسنا وكالة وساطة تقليدية؛ لا ندرج العقارات وننتظر الاستفسارات. نحن نعمل كشريك تجاري — نبني الحجة للمشروع، ونعرضه على الجمهور المناسب، ونتابع حتى يتم بيع الوحدات. المطور يبني، ونحن نتأكد من أن السوق يراه بوضوح.</p>
+        <div class="pull-quote" style="margin-top:2rem;border-right:2px solid var(--copper);padding-right:1.2rem;">
+          <p>"لا ينبغي أن يعتمد المشروع الجيد على السمعة الشفهية وحدها. إنه يحتاج إلى التحليل، وتحديد المكانة، والعرض، والوصول إلى المشترين الجادين."</p>
+          <cite>علي رحيم · المؤسس</cite>
+        </div>
+      </div>
+      <div class="diff-cards reveal">
+        <div class="diff-card"><div class="diff-num">01</div><div class="diff-label">تحليل الأعمال وتحديد مكانة المشروع</div></div>
+        <div class="diff-card"><div class="diff-num">02</div><div class="diff-label">التسويق والمواد الترويجية ومواد المشتري</div></div>
+        <div class="diff-card"><div class="diff-num">03</div><div class="diff-label">الوصول للمشترين المحليين والمغتربين والدوليين</div></div>
+        <div class="diff-card"><div class="diff-num">04</div><div class="diff-label">تنسيق المبيعات ومتابعة المعاملات</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DELIVER -->
+  <section class="bg-navy-grad" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">ما نقدمه</p>
+    <h2 class="section-title" style="color:var(--white);">استراتيجية الأعمال،<br>والتسويق، والمبيعات.</h2>
+    <p class="intro-text dark-intro">نحن نفعل أكثر من مجرد تقديم المشترين. نساعد في تشكيل الحجة التجارية وراء المشروع: لمن هو مخصص، ولماذا السعر منطقي، وما الذي يحتاج المشتري لفهمه، وكيف يجب تقديم المشروع.</p>
+    <div class="dev-services-grid stagger">
+      <article class="dev-service-card reveal"><div class="dev-service-num">01</div><h3 class="dev-service-title">تحليل الأعمال وتحديد المكانة</h3><p class="dev-service-desc">نقيم المشروع، والمشتري المستهدف، ومنطق التسعير، وقصة الموقع، والمنافسين، والاعتراضات المحتملة قبل بناء حالة المبيعات.</p></article>
+      <article class="dev-service-card reveal"><div class="dev-service-num">02</div><h3 class="dev-service-title">هندسة حالة الاستثمار</h3><p class="dev-service-desc">نترجم المشروع إلى حجة واضحة للمشتري: السعر، والقيمة، ومنطق الإيجار، وحالة الاستخدام، والتشطيبات، والجدول الزمني، والمكانة طويلة الأمد.</p></article>
+      <article class="dev-service-card reveal"><div class="dev-service-num">03</div><h3 class="dev-service-title">التسويق ومواد المبيعات</h3><p class="dev-service-desc">الكتيبات، وملخصات الوحدات، وقوائم الأسعار، وملاحظات المواصفات، والأصول المرئية، والحملات الرقمية — يتم إنشاؤها أو تنسيقها من أجلك.</p></article>
+      <article class="dev-service-card reveal"><div class="dev-service-num">04</div><h3 class="card-title" style="color:var(--gold);">تطوير قنوات المشتري</h3><p class="dev-service-desc">المستثمرون المحليون، ومشتري MRE، والعملاء الدوليون، وشركاء الإحالة، والتواصل المباشر — يتم مطابقتهم مع الملف الشخصي المناسب للمشروع.</p></article>
+      <article class="dev-service-card reveal"><div class="dev-service-num">05</div><h3 class="dev-service-title">دعم عملية المبيعات</h3><p class="dev-service-desc">التعامل مع الاستفسارات، وأسئلة المشترين، وتنسيق زيارات الموقع، ومتابعة الحجز، والتنسيق مع الموثق، وزخم المعاملات.</p></article>
+      <article class="dev-service-card reveal"><div class="dev-service-num">06</div><h3 class="dev-service-title">ذكاء السوق والاستراتيجية</h3><p class="dev-service-desc">نجلب فهمًا من جانب المشتري لما هي المعلومات المفقودة، وما الذي يبني الثقة، وما الذي يجعل بيع المشروع أسهل.</p></article>
+    </div>
+  </section>
+
+  <!-- OUR PROCESS -->
+  <section class="bg-white" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">عمليتنا</p>
+    <h2 class="section-title" style="color:var(--navy);">كيف نعمل معًا.</h2>
+    <div class="process-grid stagger">
+      <article class="process-step reveal"><div class="process-step-num">01</div><h3 class="process-step-title">مراجعة المشروع</h3><p class="process-step-desc">نراجع المشروع، والجاهزية القانونية، والتسعير، ومزيج الوحدات، والموقع، والمشتري المستهدف، وتحديات المبيعات الحالية.</p></article>
+      <article class="process-step reveal"><div class="process-step-num">02</div><h3 class="process-step-title">الاستراتيجية التجارية</h3><p class="process-step-desc">نحدد شرائح المشترين، وحجة المبيعات، وسرد التسعير، واحتياجات التسويق، وفجوات المعلومات التي يجب معالجتها.</p></article>
+      <article class="process-step reveal"><div class="process-step-num">03</div><h3 class="process-step-title">التسويق والتوزيع</h3><p class="process-step-desc">نعد مواد المشتري ونفعل القنوات الأكثر صلة: المحلية، أو MRE، أو الدولية، أو مزيج منها.</p></article>
+      <article class="process-step reveal"><div class="process-step-num">04</div><h3 class="process-step-title">متابعة المبيعات</h3><p class="process-step-desc">ندير الاستفسارات، وزيارات الموقع، والحجوزات، وأسئلة المشترين، والتنسيق مع الموثق، والمتابعة حتى يتم التعامل مع كل صفقة بشكل صحيح.</p></article>
+    </div>
+  </section>
+
+  <!-- MANDATE TERMS -->
+  <section class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">شروط الشراكة</p>
+    <h2 class="section-title" style="color:var(--white);">ما يتطلبه<br>التفويض الجاد.</h2>
+    <p class="intro-text dark-intro">نكون أكثر فائدة عندما يريد المطور العقاري أكثر من مجرد الظهور. يتطلب التفويض الجيد الوصول إلى المعلومات، واستجابة صانع القرار، والتسعير الموثوق، والرغبة في تقديم المشروع بشكل صحيح.</p>
+    <div class="terms-grid">
+      <div class="terms-block">
+        <h3 class="terms-block-title">ما نقدمه</h3>
+        <div class="terms-list">
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>تحليل الأعمال:</strong> التسعير، وشرائح المشترين، ونقاط القوة، والاعتراضات، والموقف التنافسي.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>حالة الاستثمار:</strong> سرد واضح يمكن للمشترين فهمه — وليس مجرد قائمة وحدات ومخططات طوابق.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>الإنتاج التسويقي:</strong> المواد، والنصوص، والأصول الرقمية، وتوجيه الحملات، وتنظيم مواد المبيعات.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>توزيع المشتري:</strong> التواصل مع شرائح المشترين المحليين والمغتربين والدوليين عند الاقتضاء.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>تنسيق المبيعات:</strong> متابعة منظمة من الاستفسار إلى الحجز إلى الإغلاق.</p></div>
+        </div>
+      </div>
+      <div class="terms-block">
+        <h3 class="terms-block-title">ما نطلبه</h3>
+        <div class="terms-list">
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>نطاق تفويض واضح:</strong> اتفاق حول مسؤولياتنا وما يتحكم فيه المطور.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>الوثائق القانونية والفنية:</strong> التصاريح، والمخططات، ومعلومات السجل، والمواصفات، وجدول التسليم، وشروط الدفع.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>الاستجابة:</strong> إجابات في الوقت المناسب، والوصول إلى صناع القرار، ومتابعة موثوقة عندما يسأل المشترون أسئلة جادة.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>تسعير موثوق:</strong> نسبة سعر وجودة يمكن أن تصمد أمام المقارنة وفحص المشترين.</p></div>
+          <div class="terms-item reveal"><div class="terms-dot"></div><p class="terms-text"><strong>التوافق في المبيعات:</strong> جداول زمنية متفق عليها، وتوفر، وتنسيق مع الموثقين أو موظفي المبيعات الداخليين.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="dark-cta" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">شاركنا العمل</p>
+    <h2 class="section-title">هل أنت مستعد لتقديم<br>مشروعك بشكل صحيح؟</h2>
+    <p class="cta-sub" style="color:rgba(255,255,255,0.62);max-width:560px;margin:0 auto 2.5rem;">إذا كان لديك مشروع يتمتع بأساسيات قوية ولكن ظهوره في السوق محدود، نرحب بمحادثة حول ما إذا كان تفويض الاستراتيجية والتسويق والمبيعات هو الخيار المناسب.</p>
+    <div class="cta-actions">
+      <a href="index.html#contact" class="btn-gold">طلب اقتراح شراكة</a>
+      <a href="elaf-sky-view.html" class="btn-outline-dark">عرض Elaf Sky View — تفويضنا الحالي</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" style="padding:var(--section-pad);" id="contact">
+    <p class="section-eyebrow">اتصل بنا</p>
+    <h2 class="section-title" style="color:var(--white);">أخبرنا بما تنوي<br>شراءه أو بناءه.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:640px;margin-top:.8rem;margin-bottom:3.5rem;">سواء كنت تقارن بين العقارات، أو تشتري من الخارج، أو تعود إلى الوطن، أو تطرح مشروعًا في السوق، فإن الخطوة التالية الصحيحة تعتمد على وضعك. أخبرنا بما تعمل عليه وسنرد عليك بالمسار الأكثر صلة.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-item-label">البريد الإلكتروني</div>
+              <div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <div class="contact-item-label">الهاتف و WhatsApp</div>
+              <div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <div class="contact-item-label">المقر الرئيسي</div>
+              <div class="contact-item-value">70 شارع يوسف بن تاشفين،<br>القنيطرة 14000، المغرب</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojypvlq" method="POST" data-sending="جارٍ الإرسال…" data-success="تم إرسال رسالتك. سنتواصل معك قريبًا." data-error="حدث خطأ. يرجى مراسلتنا مباشرة على contact@RahimInternational.com.">
+          <input type="hidden" name="subject" value="استفسار من RahimInternational.com/ar">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="first-name">الاسم الشخصي</label>
+              <input id="first-name" name="first_name" type="text" class="form-input" placeholder="اسمك الشخصي" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">الاسم العائلي</label>
+              <input id="last-name" name="last_name" type="text" class="form-input" placeholder="اسمك العائلي" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">البريد الإلكتروني</label>
+            <input id="email" name="email" type="email" class="form-input" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profile">أنا</label>
+            <select id="profile" name="profile" class="form-select" required>
+              <option value="">اختر ملفك الشخصي</option>
+              <option>مطور عقاري يبحث عن شريك مبيعات</option>
+              <option>مستثمر دولي</option>
+              <option>مغاربة العالم / مشتري MRE</option>
+              <option>مستثمر محلي</option>
+              <option>آخر</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">الرسالة</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="أخبرنا بما تعمل عليه…"></textarea>
+          </div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button type="submit" class="form-submit">إرسال الاستفسار</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="../logo.png" alt="Rahim International" class="footer-brand-logo"><span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span><p class="footer-tagline">استشارات عقارية للمشترين والمطورين في سوق الرباط-سلا-القنيطرة.</p></div>
+    <div><div class="footer-col-label">التنقل</div><div class="footer-links"><a href="index.html">الرئيسية</a><a href="about.html">من نحن</a><a href="why-morocco.html">لماذا القنيطرة</a><a href="elaf-sky-view.html">Elaf Sky View</a><a href="index.html#contact">اتصل بنا</a></div></div>
+    <div><div class="footer-col-label">المشترون والأدلة</div><div class="footer-links"><a href="investors-international.html">المشترون الدوليون</a><a href="investors-mre.html">مغاربة العالم (MRE)</a><a href="investors-local.html">المشترون المحليون</a><a href="services-developers.html">خدمات المطورين</a><a href="guides/index.html">أدلة الشراء</a></div></div>
+    <div><div class="footer-col-label">اتصل بنا</div><div class="footer-contact-item"><div class="footer-contact-icon">✉</div><div><div class="footer-contact-label">البريد الإلكتروني</div><div class="footer-contact-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div></div></div><div class="footer-contact-item"><div class="footer-contact-icon">☎</div><div><div class="footer-contact-label">الهاتف و WhatsApp</div><div class="footer-contact-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div></div></div></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 Rahim International. جميع الحقوق محفوظة.</div><div class="footer-langs"><a href="../services-developers.html">EN</a><a href="../fr/services-developers.html">FR</a><a href="services-developers.html" class="active">AR</a></div></div>
+</footer>
+<div class="float-buttons"><a href="https://wa.me/212642773249?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="دردشة عبر WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><button class="btn-back-top" aria-label="العودة إلى الأعلى"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button></div>
+<script src="../shared.js"></script>
+</body>
+</html>

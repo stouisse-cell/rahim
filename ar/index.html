@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استشارات عقارية في المغرب | منطقة القنيطرة والرباط وسلا | Rahim International</title>
+<meta name="description" content="تجمع Rahim International بين الاستشارات العقارية، وأبحاث السوق، واستراتيجية المشاريع، والتسويق، والوساطة لمساعدة المشترين والمطورين على اتخاذ قرارات أفضل في سوق الرباط وسلا والقنيطرة.">
+<link rel="canonical" href="https://rahiminternational.com/ar/index.html">
+<link rel="alternate" hreflang="en" href="https://rahiminternational.com/index.html">
+<link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/index.html">
+<link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/index.html">
+<link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/index.html">
+<link rel="icon" type="image/png" href="../logo.png">
+<meta property="og:title" content="Rahim International | استشارات عقارية في المغرب">
+<meta property="og:description" content="نحن نبني الجسور. استشارات عقارية للمشترين والمطورين في سوق الرباط وسلا والقنيطرة.">
+<meta property="og:image" content="https://rahiminternational.com/elaf.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rahiminternational.com/ar/index.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Rahim International","url":"https://rahiminternational.com","email":"contact@RahimInternational.com","telephone":"+212642773249","address":{"@type":"PostalAddress","streetAddress":"70 Av. Youssef Ben Tachfine","addressLocality":"القنيطرة","postalCode":"14000","addressCountry":"MA"},"description":"استشارات عقارية وتسويق ووساطة للمشترين والمطورين في منطقة الرباط وسلا والقنيطرة بالمغرب."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../shared.css">
+<style>
+  /* ---- Index-specific styles ---- */
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 5% 6rem;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .hero-video-wrap {
+    position: absolute; inset: 0;
+    z-index: 1;
+  }
+  .hero-video-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.62;
+  }
+  .hero-video-wrap video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.62;
+    position: absolute; inset: 0;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    z-index: 2;
+    background:
+      radial-gradient(circle at 72% 24%, rgba(183,106,63,0.16), transparent 30%),
+      linear-gradient(to left, rgba(7,17,31,0.96) 0%, rgba(8,26,51,0.72) 52%, rgba(8,26,51,0.2) 100%),
+      linear-gradient(to top, rgba(7,17,31,0.72) 0%, transparent 55%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    z-index: 3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(210,180,134,0.03) 80px);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 4;
+    max-width: 860px;
+  }
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--copper);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .hero-eyebrow::after {
+    content: '';
+    width: 30px; height: 1px;
+    background: currentColor;
+    flex: 0 0 auto;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+    font-weight: 300;
+    line-height: 1.04;
+    color: var(--white);
+    margin-bottom: 1.6rem;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-size: 0.96rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.68);
+    max-width: 620px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 5%;
+    z-index: 4;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    writing-mode: vertical-rl;
+  }
+  .hero-scroll::after {
+    content: '';
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(210,180,134,0.6), transparent);
+  }
+
+  /* Problem section */
+  .problem-section { background: var(--cream); }
+  .problem-split {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(280px,0.75fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .body-text {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper-dark);
+  }
+  .service-tag-sep { color: var(--border); }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin-top: 2rem;
+  }
+  .pillar-item {
+    background: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(183,106,63,0.3);
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+  .pillar-text {
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+    padding-top: 0.25rem;
+  }
+
+  /* Services / paths section */
+  .paths-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(210,180,134,0.14);
+    margin-top: 3.5rem;
+  }
+  .path-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+    position: relative;
+  }
+  .path-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--copper), var(--gold));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s ease;
+  }
+  .path-card:hover { background: rgba(255,255,255,0.09); }
+  .path-card:hover::before { transform: scaleX(1); }
+  .path-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(210,180,134,0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .path-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.9rem;
+    line-height: 1.3;
+  }
+  .path-desc {
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.58);
+    margin-bottom: 1.5rem;
+  }
+  .path-link {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--copper);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+  }
+  .path-link::after { content: '←'; }
+  .path-card:hover .path-link { color: var(--gold); }
+  .paths-footer {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  /* Gallery */
+  .gallery-wrap {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background: var(--navy-mid);
+  }
+  .gallery-slide {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .gallery-slide.is-active { opacity: 1; }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(8,26,51,0.8) 0%, transparent 55%);
+    z-index: 1;
+  }
+  .gallery-btn {
+    position: absolute;
+    top: 50%; z-index: 3;
+    width: 44px; height: 44px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(7,17,31,0.55);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .gallery-btn:hover { background: var(--copper); border-color: var(--copper); }
+  .gallery-prev { left: 1.2rem; }
+  .gallery-next { right: 1.2rem; }
+  .gallery-dots {
+    position: absolute;
+    left: 1.5rem; bottom: 1.5rem;
+    z-index: 3;
+    display: flex;
+    gap: 0.4rem;
+  }
+  .gallery-dot {
+    width: 8px; height: 8px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+  }
+  .gallery-dot.is-active { background: var(--gold); border-color: var(--gold); }
+  .gallery-label {
+    position: absolute;
+    bottom: 1.5rem; right: 1.5rem;
+    z-index: 3;
+  }
+  .gallery-location {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+  .gallery-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  /* Elaf section */
+  .elaf-section { background: linear-gradient(135deg, var(--steel), #ead8c8); }
+  .elaf-grid {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(300px,0.75fr);
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3.5rem;
+  }
+  .elaf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.2rem 0;
+  }
+  .elaf-tag {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.65rem;
+    color: var(--text-muted);
+    background: var(--white);
+  }
+  .elaf-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+  }
+  .elaf-stat {
+    background: var(--white);
+    padding: 1.2rem 1rem;
+  }
+  .elaf-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .elaf-stat-label {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+  .elaf-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* Contact section */
+  .contact-section { background: var(--navy); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(220px,0.65fr) minmax(0,1fr);
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info { display: grid; gap: 1.5rem; }
+  .contact-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .contact-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border-warm);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--copper);
+    font-size: 0.85rem;
+  }
+  .contact-item-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 0.2rem;
+  }
+  .contact-item-value,
+  .contact-item-value a {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+  }
+
+  @media (max-width: 1180px) {
+    .paths-grid { grid-template-columns: 1fr 1fr; }
+    .elaf-stats { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 900px) {
+    .problem-split,
+    .elaf-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .gallery-wrap { height: 380px; }
+  }
+  @media (max-width: 680px) {
+    .hero { padding-bottom: 5rem; }
+    .hero-title { font-size: clamp(2.8rem, 14vw, 4rem); }
+    .paths-grid { grid-template-columns: 1fr; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .elaf-stats { grid-template-columns: 1fr 1fr; }
+    .gallery-wrap { height: 300px; }
+  }
+</style>
+</head>
+<body>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="site-nav" id="home" aria-label="التنقل الرئيسي">
+  <a href="index.html" class="brand" aria-label="Rahim International الصفحة الرئيسية">
+    <img src="../logo.png" alt="" class="brand-logo" aria-hidden="true">
+    <span class="brand-text">
+      <span class="brand-name">Rahim <span>International</span></span>
+      <span class="brand-subtitle">استشارات عقارية واستراتيجية</span>
+    </span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="افتح القائمة" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="active">الرئيسية</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">للمشترين</button>
+      <div class="nav-dropdown-menu">
+        <a href="investors-international.html">المشترون الدوليون</a>
+        <a href="investors-mre.html">مغاربة العالم MRE</a>
+        <a href="investors-local.html">المشترون المحليون</a>
+      </div>
+    </li>
+    <li><a href="services-developers.html">خدمات المطورين</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-haspopup="true">أدلة الشراء</button>
+      <div class="nav-dropdown-menu">
+        <a href="guides/index.html">نظرة عامة على أدلة الشراء</a>
+        <a href="guides/buying-property-morocco.html">شراء عقار في المغرب</a>
+        <a href="guides/daam-sakani-guide.html">دليل Daam Sakani</a>
+        <a href="guides/kenitra-vs-rabat.html">القنيطرة مقابل الرباط</a>
+      </div>
+    </li>
+    <li><a href="why-morocco.html">لماذا القنيطرة</a></li>
+    <li><a href="elaf-sky-view.html">Elaf Sky View</a></li>
+    <li><a href="#contact">اتصل بنا</a></li>
+    <li class="language-switcher">
+      <a href="../index.html">EN</a>
+      <a href="../fr/index.html">FR</a>
+      <a href="index.html" class="active">AR</a>
+    </li>
+  </ul>
+  <a href="#contact" class="nav-cta">استفسر الآن</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Rahim International — استشارات عقارية في المغرب">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <img src="../hero-poster.jpg" alt="" style="position:absolute;inset:0;">
+      <video autoplay muted loop playsinline poster="../hero-poster.jpg">
+        <source src="../hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">استشارات عقارية واستراتيجية</p>
+      <h1 class="hero-title">نحن القَنْطَرّة التي تختصر المسافات،<br><em>وتوصلك إلى الضفة الأخرى.</em></h1>
+      <p class="hero-sub">نجمع بين الاستشارات العقارية، وأبحاث السوق، واستراتيجية المشاريع، والتسويق، والوساطة لمساعدة المشترين والمطورين العقاريين على اتخاذ قرارات أفضل في سوق الرباط وسلا والقنيطرة.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">اختر مسارك</a>
+        <a href="#contact" class="btn-outline">ابدأ محادثة</a>
+      </div>
+    </div>
+    <span class="hero-scroll" aria-hidden="true">اسحب للأسفل</span>
+  </section>
+
+  <!-- WHAT WE SOLVE -->
+  <section class="problem-section" style="padding:var(--section-pad);" id="about">
+    <div class="problem-split">
+      <div>
+        <p class="section-eyebrow">ماذا نفعل</p>
+        <h2 class="section-title" style="color:var(--navy);">الجسر المفقود.</h2>
+        <p class="body-text">في الأسواق الأكثر رسوخاً في المغرب — مراكش، الدار البيضاء، أكادير — الطريق من المشتري إلى العقار منظمة. الوكالات مرئية. العروض مقدمة بشكل صحيح. والمعلومات متاحة.</p>
+        <p class="body-text">أما في المدن المحيطة بالرباط — القنيطرة، سلا، تمارة — فإن الفرصة حقيقية بنفس القدر، لكن البنية التحتية المحيطة بها ليست كذلك. المشاريع الجيدة تنتقل عبر الشبكات الشخصية. يقضي المشترون أسابيع في البحث عن معلومات يجب أن يستغرق العثور عليها أياماً. ويصل المطورون إلى جزء بسيط من الجمهور الذي تستحقه مشاريعهم.</p>
+        <p class="body-text">هذه الفجوة هي سبب وجودنا. نحن نربط بين المشترين الذين يحتاجون إلى معلومات موثقة قبل الالتزام، والمطورين الذين تستحق مشاريعهم الوصول إلى الجمهور المناسب.</p>
+        <p class="body-text" style="font-style:normal;color:var(--copper-dark);border-right:2px solid var(--copper);padding-right:1.2rem;margin-top:1.8rem;">نحن الجسر المفقود في هذا السوق.</p>
+                <div class="service-tags" aria-label="ماذا نفعل">
+          <span>استشارات</span>
+          <span class="service-tag-sep">·</span>
+          <span>تطوير</span>
+          <span class="service-tag-sep">·</span>
+          <span>تسويق</span>
+          <span class="service-tag-sep">·</span>
+          <span>وساطة</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="pillars-grid">
+          <div class="pillar-item"><div class="pillar-num">01</div><div class="pillar-text">أبحاث سوق دقيقة قبل تقديم التوصيات</div></div>
+          <div class="pillar-item"><div class="pillar-num">02</div><div class="pillar-text">تحديد موقع المشاريع للمشترين الجادين</div></div>
+          <div class="pillar-item"><div class="pillar-num">03</div><div class="pillar-text">متابعة محلية مستمرة خلال العملية</div></div>
+          <div class="pillar-item"><div class="pillar-num">04</div><div class="pillar-text">دعم عبر المغرب وأمريكا الشمالية وأوروبا</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYER PROFILES -->
+  <section class="paths-section" style="padding:var(--section-pad);" id="services">
+    <p class="section-eyebrow" style="color:var(--copper);">من أنت؟</p>
+    <h2 class="section-title" style="color:var(--white);">ابحث عن المسار<br>الذي يناسب حالتك.</h2>
+    <p style="font-size:.92rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.65);max-width:640px;margin-top:.8rem;">يواجه المشترون المختلفون تحديات مختلفة في هذا السوق. اقرأ الملف الشخصي الذي يصف حالتك — ثم اتبع المسار الذي يؤدي إلى المعلومات الصحيحة والأسئلة الصحيحة.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(210,180,134,.14);margin:3rem 0 0;">
+      <a href="investors-international.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(110,143,171,.6);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(130,190,220,.85);margin-bottom:1rem;">مشتري دولي</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">تعيش خارج المغرب وتفكر في الشراء بغرض الانتقال، أو الحصول على منزل ثانٍ، أو دخل إيجاري.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">تحديك الرئيسي: التعامل مع نظام قانوني وسوق غير مألوفين من الخارج، مع وقت محدود على أرض الواقع.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(130,190,220,.85);border-bottom:1px solid rgba(130,190,220,.3);padding-bottom:.2rem;">هذا أنا ←</span>
+      </a>
+      <a href="investors-mre.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(183,106,63,.8);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">مغاربة العالم / MRE</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">أنت مغربي تعيش في الخارج، وتريد الشراء في وطنك — منزل ثانٍ، أو استثمار، أو قاعدة مستقبلية.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">تحديك الرئيسي: اتخاذ قرار جدي بزيارات محدودة ورؤية غير كاملة عن بُعد.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(210,180,134,.35);padding-bottom:.2rem;">هذا أنا ←</span>
+      </a>
+      <a href="investors-local.html" style="background:rgba(255,255,255,.05);padding:2.8rem 2.2rem;text-decoration:none;display:block;border-top:3px solid rgba(90,150,90,.6);transition:background .3s;" onmouseover="this.style.background='rgba(255,255,255,.09)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+        <p style="font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(140,200,140,.85);margin-bottom:1rem;">مستثمر محلي</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:var(--white);margin-bottom:.9rem;line-height:1.4;">تعيش في المغرب وتوازن بين الخيارات — منزل أول، أو استثمار إيجاري، أو فرصة في مدينة ثانية.</h3>
+        <p style="font-size:.84rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.52);margin-bottom:1.6rem;">تحديك الرئيسي: المعلومات المشتتة وسوق متوسطة غير منظمة كفاية حيث يصعب العثور على المشاريع الجيدة.</p>
+        <span style="font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(140,200,140,.85);border-bottom:1px solid rgba(140,200,140,.3);padding-bottom:.2rem;">هذا أنا ←</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- REAL ESTATE DEVELOPERS — separate section -->
+  <section style="background:var(--ink);padding:clamp(3rem,5vw,5rem) 5%;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,0.8fr);gap:5rem;align-items:center;">
+      <div>
+        <p class="section-eyebrow" style="color:var(--copper);">للمطورين العقاريين</p>
+        <h2 class="section-title" style="color:var(--white);">حوّل مشروعك الجيد<br>إلى فرصة واضحة.</h2>
+        <p style="font-size:.95rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.6);margin-bottom:2.2rem;">تفتقر المشاريع القوية في منطقة القنيطرة والرباط وسلا أحياناً إلى البنية التحتية التسويقية والاستراتيجية التي تستحقها. نحن نساعد المطورين على سد هذه الفجوة من خلال التحليل، وتحديد الموقع، والتسويق الاحترافي، والوصول إلى المشترين خارج الشبكات المحلية.</p>
+        <a href="services-developers.html" class="btn-gold">اكتشف خدمات المطورين</a>
+      </div>
+      <div class="reveal" style="background:rgba(255,255,255,.03);border:1px solid rgba(210,180,134,.15);padding:2.5rem;">
+        <div style="font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">مجالات خبرتنا للمطورين</div>
+        <ul style="list-style:none;padding:0;display:grid;gap:1.2rem;">
+          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> استراتيجية المشروع وتحديد موقعه في السوق</li>
+          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> التسويق الموجه والعلامة التجارية العقارية</li>
+          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> تنفيذ المبيعات وإدارة علاقات المشترين</li>
+          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> أبحاث السوق وتحليل المنافسين</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-wrap" aria-label="معرض المشاريع والمنطقة">
+    <img src="../elaf.jpg" alt="Elaf Sky View - مشروع سكني في القنيطرة" class="gallery-slide is-active">
+    <img src="../elaf-2.jpg" alt="Elaf Sky View - التصميم الخارجي" class="gallery-slide">
+    <img src="../kenitra1.png" alt="منظر لمدينة القنيطرة" class="gallery-slide">
+    <img src="../plagemehdia.webp" alt="شاطئ مهدية بالقرب من القنيطرة" class="gallery-slide">
+    <div class="gallery-overlay"></div>
+    <button class="gallery-btn gallery-prev" type="button" aria-label="الصورة السابقة">‹</button>
+    <button class="gallery-btn gallery-next" type="button" aria-label="الصورة التالية">›</button>
+    <div class="gallery-dots">
+      <button class="gallery-dot is-active" type="button" aria-label="اذهب للصورة 1"></button>
+      <button class="gallery-dot" type="button" aria-label="اذهب للصورة 2"></button>
+      <button class="gallery-dot" type="button" aria-label="اذهب للصورة 3"></button>
+      <button class="gallery-dot" type="button" aria-label="اذهب للصورة 4"></button>
+    </div>
+    <div class="gallery-label">
+      <p class="gallery-location">مشروع مميز</p>
+      <p class="gallery-name">Elaf Sky View</p>
+    </div>
+  </section>
+
+  <!-- ELAF PREVIEW -->
+  <section class="elaf-section" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">عرض حصري</p>
+    <h2 class="section-title" style="color:var(--navy);">Elaf Sky View</h2>
+    <p class="body-text">مشروع سكني استثنائي يعيد تعريف معايير الجودة في القنيطرة. يقع في منطقة لا فيل أوت (La Ville Haute)، ويقدم توازناً نادراً بين الموقع الاستراتيجي، وجودة البناء، والقيمة الاستثمارية.</p>
+    
+    <div class="elaf-grid">
+      <div>
+        <div class="elaf-tags">
+          <span class="elaf-tag">تسليم فوري</span>
+          <span class="elaf-tag">تشطيبات فاخرة</span>
+          <span class="elaf-tag">موقع استراتيجي</span>
+          <span class="elaf-tag">داعم لبرنامج Daam Sakani</span>
+        </div>
+        <div class="elaf-stats">
+          <div class="elaf-stat"><div class="elaf-stat-num">35</div><div class="elaf-stat-label">شقة فاخرة</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">61–108</div><div class="elaf-stat-label">مساحات بالمتر المربع</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">11,500</div><div class="elaf-stat-label">درهم MAD / م²</div></div>
+          <div class="elaf-stat"><div class="elaf-stat-num">0%</div><div class="elaf-stat-label">عمولة المشتري</div></div>
+        </div>
+        <div class="elaf-actions">
+          <a href="elaf-sky-view.html" class="btn-primary">تفاصيل المشروع</a>
+          <a href="../elaf-sky-view-brochure.pdf" class="btn-outline" target="_blank">تحميل الكتيب PDF</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <img src="../elaf.jpg" alt="Elaf Sky View القنيطرة" style="width:100%;border:1px solid var(--border-warm);box-shadow:var(--shadow);">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:var(--section-pad);background:var(--white);" id="faq">
+    <div class="reveal" style="max-width:880px;margin:0 auto;">
+      <p class="section-eyebrow">الأسئلة الشائعة</p>
+      <h2 class="section-title" style="color:var(--navy);margin-bottom:2.5rem;">إجابات سريعة قبل أن تتواصل معنا.</h2>
+      <ul class="faq-list" style="list-style:none;padding:0;margin:0;">
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>هل يمكن للأجانب شراء عقارات في المغرب؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">نعم. يسمح القانون المغربي للأجانب بتملك العقارات المبنية والشقق دون قيود تُذكر، باستثناء الأراضي الفلاحية. لا تُشترط الإقامة لإتمام الشراء، ويتم تسجيل العقار رسمياً باسم المشتري لدى المحافظة العقارية.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>ما هي التكاليف الإجمالية لشراء عقار في المغرب؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">يضاف إلى ثمن العقار رسوم تسجيل بنسبة 4% تقريباً، ورسوم المحافظة العقارية بنسبة 1.5%، وأتعاب الموثّق بين 0.5% و1%، إضافة إلى مصاريف ملف بسيطة. إجمالاً، احسب نحو 6% إلى 7% فوق سعر العقار لتغطية كل مصاريف نقل الملكية.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>ما هو برنامج "Daam Sakani" ومن يستفيد منه؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">"Daam Sakani" هو برنامج دعم حكومي مباشر يمنح المشتري الأول دعماً مالياً يصل إلى 100,000 درهم لاقتناء سكنه الرئيسي، وهو متاح أيضاً للمغاربة المقيمين بالخارج وفق شروط محدّدة. نوفّر دليلاً مفصّلاً بالعربية يشرح المبالغ، شروط الاستحقاق، والوثائق المطلوبة.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>هل يمكنني كمغربي مقيم بالخارج (MRE) الحصول على قرض عقاري في المغرب؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">نعم. تُقدّم البنوك المغربية الكبرى منتجات تمويل مخصّصة لـ MRE تصل إلى 70% من قيمة العقار، بعقود بالدرهم أو بالعملة الصعبة. نرافقك في تجهيز الملف، مقارنة العروض، والتفاوض على الشروط، ونتولى الإشراف على المعاملة عن بُعد إذا لم تكن في المغرب.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>لماذا تركّزون على منطقة الرباط – سلا – القنيطرة؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">المنطقة تجمع بين العاصمة الإدارية واقتصاد القنيطرة الصناعي الصاعد (مصنع ستيلانتيس، الميناء الأطلسي، خط TGV)، مع أسعار لا تزال أقل بكثير من الدار البيضاء أو طنجة. هذا الفارق السعري مع زخم الطلب يخلق فرصاً واضحة للسكن والاستثمار في آنٍ واحد.</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>كيف تعملون مع المشترين المقيمين خارج المغرب؟</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-text">نعمل بالكامل عن بُعد عند الحاجة: مكالمات فيديو مجدوَلة بتوقيتك، جولات مصوَّرة للعقارات، تقارير مفصّلة بالعربية أو الإنجليزية أو الفرنسية، ووكالة قانونية موثّقة لتمثيلك أمام الموثّق والبنك. لا حاجة للسفر إلا إذا رغبت في ذلك.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ar","mainEntity":[{"@type":"Question","name":"هل يمكن للأجانب شراء عقارات في المغرب؟","acceptedAnswer":{"@type":"Answer","text":"نعم. يسمح القانون المغربي للأجانب بتملك العقارات المبنية والشقق دون قيود تُذكر، باستثناء الأراضي الفلاحية. لا تُشترط الإقامة لإتمام الشراء، ويتم تسجيل العقار رسمياً باسم المشتري لدى المحافظة العقارية."}},{"@type":"Question","name":"ما هي التكاليف الإجمالية لشراء عقار في المغرب؟","acceptedAnswer":{"@type":"Answer","text":"يضاف إلى ثمن العقار رسوم تسجيل بنسبة 4% تقريباً، ورسوم المحافظة العقارية بنسبة 1.5%، وأتعاب الموثّق بين 0.5% و1%، إضافة إلى مصاريف ملف بسيطة. إجمالاً، احسب نحو 6% إلى 7% فوق سعر العقار لتغطية كل مصاريف نقل الملكية."}},{"@type":"Question","name":"ما هو برنامج Daam Sakani ومن يستفيد منه؟","acceptedAnswer":{"@type":"Answer","text":"Daam Sakani هو برنامج دعم حكومي مباشر يمنح المشتري الأول دعماً مالياً يصل إلى 100,000 درهم لاقتناء سكنه الرئيسي، وهو متاح أيضاً للمغاربة المقيمين بالخارج وفق شروط محدّدة."}},{"@type":"Question","name":"هل يمكنني كمغربي مقيم بالخارج (MRE) الحصول على قرض عقاري في المغرب؟","acceptedAnswer":{"@type":"Answer","text":"نعم. تُقدّم البنوك المغربية الكبرى منتجات تمويل مخصّصة لـ MRE تصل إلى 70% من قيمة العقار، بعقود بالدرهم أو بالعملة الصعبة، مع إمكانية إدارة المعاملة عن بُعد بالكامل."}},{"@type":"Question","name":"لماذا تركّزون على منطقة الرباط – سلا – القنيطرة؟","acceptedAnswer":{"@type":"Answer","text":"المنطقة تجمع بين العاصمة الإدارية واقتصاد القنيطرة الصناعي الصاعد (مصنع ستيلانتيس، الميناء الأطلسي، خط TGV)، مع أسعار لا تزال أقل بكثير من الدار البيضاء أو طنجة، ما يخلق فرصاً واضحة للسكن والاستثمار."}},{"@type":"Question","name":"كيف تعملون مع المشترين المقيمين خارج المغرب؟","acceptedAnswer":{"@type":"Answer","text":"نعمل بالكامل عن بُعد عند الحاجة: مكالمات فيديو مجدوَلة، جولات مصوَّرة، تقارير مفصّلة، ووكالة قانونية موثّقة لتمثيل المشتري أمام الموثّق والبنك دون الحاجة إلى السفر."}}]}</script>
+
+  <!-- CONTACT -->
+  <section class="contact-section" style="padding:var(--section-pad);" id="contact">
+    <p class="section-eyebrow">اتصل بنا</p>
+    <h2 class="section-title" style="color:var(--white);">أخبرنا بما ترغب في<br>شرائه أو بنائه.</h2>
+    <p style="font-size:.9rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:640px;margin-top:.8rem;margin-bottom:3.5rem;">سواء كنت تقارن بين العقارات، أو تشتري من الخارج، أو تعود إلى أرض الوطن، أو ترغب في تسويق مشروعك العقاري، فإن الخطوة التالية تعتمد على وضعك الخاص. أخبرنا عما تعمل عليه وسنرد عليك بالمسار الأنسب للمضي قدماً.</p>
+    
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-item-label">البريد الإلكتروني</div>
+              <div class="contact-item-value"><a href="mailto:contact@RahimInternational.com">contact@RahimInternational.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">☎</div>
+            <div>
+              <div class="contact-item-label">الهاتف و WhatsApp</div>
+              <div class="contact-item-value"><a href="tel:+212642773249">+212 642 77 32 49</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">◎</div>
+            <div>
+              <div class="contact-item-label">المكتب</div>
+              <div class="contact-item-value">70 شارع يوسف بن تاشفين، القنيطرة 14000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form id="contact-form" action="https://formspree.io/f/xvgzlowq" method="POST" class="contact-form" 
+              data-sending="جارٍ الإرسال…" 
+              data-success="تم إرسال رسالتك بنجاح. سنتواصل معك قريباً." 
+              data-error="حدث خطأ. يرجى مراسلتنا مباشرة على contact@RahimInternational.com.">
+          <input type="hidden" name="_subject" value="استفسار من RahimInternational.com/ar">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">الاسم الكامل</label>
+              <input type="text" id="name" name="name" required placeholder="كيف ناديك؟">
+            </div>
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" required placeholder="عنوان بريدك الإلكتروني">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="profile">من أنت؟</label>
+            <select id="profile" name="profile" required>
+              <option value="" disabled selected>اختر الملف الشخصي...</option>
+              <option value="International">مشتري دولي</option>
+              <option value="MRE">مغربي مقيم بالخارج (MRE)</option>
+              <option value="Local">مستثمر محلي</option>
+              <option value="Developer">مطور عقاري</option>
+              <option value="Other">أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">رسالتك</label>
+            <textarea id="message" name="message" rows="5" required placeholder="أخبرنا عن أهدافك أو أسئلتك..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold">إرسال الاستفسار</button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="../logo.png" alt="Rahim International" class="footer-logo">
+      <div class="footer-brand-text">
+        <span class="footer-brand-name">Rahim <span>International</span></span>
+        <span class="footer-brand-sub">استشارات عقارية واستراتيجية</span>
+      </div>
+      <p class="footer-desc">نحن نبني الجسور للمشترين والمطورين في سوق العقارات في الرباط وسلا والقنيطرة.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <div class="footer-label">الشركة</div>
+        <ul class="footer-links">
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services-developers.html">خدمات المطورين</a></li>
+          <li><a href="why-morocco.html">لماذا القنيطرة</a></li>
+          <li><a href="elaf-sky-view.html">Elaf Sky View</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">المشترون</div>
+        <ul class="footer-links">
+          <li><a href="investors-international.html">المشترون الدوليون</a></li>
+          <li><a href="investors-mre.html">مغاربة العالم MRE</a></li>
+          <li><a href="investors-local.html">المستثمرون المحليون</a></li>
+          <li><a href="guides/index.html">أدلة الشراء</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">اللغة</div>
+        <ul class="footer-langs">
+          <li><a href="../index.html">English</a></li>
+          <li><a href="../fr/index.html">Français</a></li>
+          <li><a href="index.html" class="active">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Rahim International. جميع الحقوق محفوظة.</div>
+    <div class="footer-legal">
+      <a href="about.html">قانوني</a>
+      <span class="footer-sep">·</span>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-buttons"><a href="https://wa.me/212642773249?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="دردشة عبر WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><button class="btn-back-top" aria-label="العودة إلى الأعلى"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button></div>
+
+
+<script src="../shared.js"></script>
+</body>
+</html>
