@@ -38,6 +38,14 @@
     opacity: 0.65;
     z-index: 1;
   }
+  .elaf-hero-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+      z-index: 1;
+    }
+  
   .elaf-hero-overlay {
     position: absolute; inset: 0;
     background:
@@ -446,6 +454,11 @@
     .project-kpis > div { min-width: calc(50% - 0.75rem); }
   }
 </style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elaf Sky View Kénitra | Rahim International">
+<meta name="twitter:description" content="35 apartments in central Kénitra. High-spec finishes, energy-ready infrastructure, selected Daam eligibility. 61–108 m² · 11,500 MAD/m².">
+<meta name="twitter:image" content="https://rahiminternational.com/elaf.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rahiminternational.com/"},{"@type":"ListItem","position":2,"name":"Elaf Sky View","item":"https://rahiminternational.com/elaf-sky-view.html"}]}</script>
 </head>
 <body>
 <div id="progress-bar" aria-hidden="true"></div>
@@ -503,6 +516,9 @@
   <!-- HERO -->
   <div class="elaf-hero">
     <div class="elaf-hero-bg" aria-hidden="true"></div>
+    <video class="elaf-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="elaf.mp4" type="video/mp4">
+      </video>
     <div class="elaf-hero-overlay" aria-hidden="true"></div>
     <div class="elaf-hero-pattern" aria-hidden="true"></div>
     <div class="elaf-hero-content">
