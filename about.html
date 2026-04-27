@@ -297,10 +297,37 @@
 <meta property="og:image:alt" content="Ali Rahim, Founder of Rahim International real estate advisory">
 <meta name="twitter:image:alt" content="Ali Rahim, Founder of Rahim International real estate advisory">
 <style>
-    /* Larger hero on this page so the full video frame is visible */
-    .page-hero { min-height: 92vh; }
-    @media (max-width: 1024px) { .page-hero { min-height: 80vh; } }
+    /* Hero sizing + scoped video sizing for the about page */
+    .page-hero { min-height: 88vh; }
+    @media (max-width: 1024px) { .page-hero { min-height: 78vh; } }
     @media (max-width: 720px)  { .page-hero { min-height: 70vh; padding: 7rem 5% 4rem; } }
+
+    /* Override shared .page-hero-video — fit fully, sit on the right, clear of the headline */
+    .page-hero .page-hero-video {
+      inset: auto;
+      top: 50%;
+      right: 4%;
+      transform: translateY(-50%);
+      width: 52%;
+      max-width: 720px;
+      height: auto;
+      max-height: 78%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 1;
+      border-radius: 6px;
+    }
+    @media (max-width: 1024px) {
+      .page-hero .page-hero-video {
+        width: 60%; max-height: 56%; top: auto; bottom: 6%; transform: none;
+      }
+    }
+    @media (max-width: 720px) {
+      .page-hero .page-hero-video {
+        position: relative; width: 100%; max-height: 38vh; right: auto; bottom: auto;
+        margin-top: 1.5rem; transform: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -363,7 +390,7 @@
   <!-- HERO -->
   <section class="page-hero">
     <div class="page-hero-bg" style="background: linear-gradient(to right, rgba(7,17,31,0.94) 0%, rgba(8,26,51,0.72) 55%, rgba(8,26,51,0.18) 100%), url('kenitra1.png') center 40% / cover; opacity: 0.65;" aria-hidden="true"></div>
-    <video class="page-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="object-fit:contain;object-position:right center;background:#07111f;">
+    <video class="page-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
         <source src="heroabout.mp4" type="video/mp4">
       </video>
     <div class="page-hero-fade" aria-hidden="true"></div>
