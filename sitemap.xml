@@ -1,139 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rahiminternational.com/</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/"/>
-  </url>
-  <url>
-    <loc>https://rahiminternational.com/about.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/about.html"/>
+      <loc>https://rahiminternational.com/about.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/about.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/about.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/elaf-sky-view.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/elaf-sky-view.html"/>
+      <loc>https://rahiminternational.com/ar/about.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/about.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/ar/elaf-sky-view.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/elaf-sky-view.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/elaf-sky-view.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/elaf-sky-view.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/elaf-sky-view.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/buying-property-morocco.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
+      <loc>https://rahiminternational.com/ar/guides/buying-property-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/buying-property-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/buying-property-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/complete-buyer-guide.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/complete-buyer-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/complete-buyer-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/complete-buyer-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/complete-buyer-guide.html"/>
-  </url>
-  <url>
-    <loc>https://rahiminternational.com/guides/daam-sakani-guide.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
+      <loc>https://rahiminternational.com/ar/guides/daam-sakani-guide.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/daam-sakani-guide.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/daam-sakani-guide.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/foreign-investor-guide.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/foreign-investor-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/foreign-investor-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/foreign-investor-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/foreign-investor-guide.html"/>
-  </url>
-  <url>
-    <loc>https://rahiminternational.com/guides/index.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/index.html"/>
+      <loc>https://rahiminternational.com/ar/guides/index.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/index.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/index.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/index.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/kenitra-vs-rabat.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
+      <loc>https://rahiminternational.com/ar/guides/kenitra-vs-rabat.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/kenitra-vs-rabat.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/kenitra-vs-rabat.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/mre-buying-guide.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/mre-buying-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/mre-buying-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/mre-buying-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/mre-buying-guide.html"/>
-  </url>
+      <loc>https://rahiminternational.com/ar/index.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/"/>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/guides/preconstruction-guide.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/preconstruction-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/preconstruction-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/preconstruction-guide.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/preconstruction-guide.html"/>
-  </url>
-  <url>
-    <loc>https://rahiminternational.com/investors-international.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-international.html"/>
+      <loc>https://rahiminternational.com/ar/investors-international.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-international.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-international.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-international.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-international.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/investors-local.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-local.html"/>
+      <loc>https://rahiminternational.com/ar/investors-local.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-local.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-local.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-local.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-local.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/investors-mre.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-mre.html"/>
+      <loc>https://rahiminternational.com/ar/investors-mre.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-mre.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-mre.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-mre.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-mre.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/services-buyers.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-buyers.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/services-buyers.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/services-buyers.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/services-buyers.html"/>
-  </url>
-  <url>
-    <loc>https://rahiminternational.com/services-developers.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-developers.html"/>
+      <loc>https://rahiminternational.com/ar/services-developers.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-developers.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/services-developers.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/services-developers.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/services-developers.html"/>
-  </url>
+    </url>
   <url>
-    <loc>https://rahiminternational.com/why-morocco.html</loc>
-    <lastmod>2026-04-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/why-morocco.html"/>
+      <loc>https://rahiminternational.com/ar/why-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/why-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/why-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/why-morocco.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/why-morocco.html"/>
-  </url>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/elaf-sky-view.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/elaf-sky-view.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/about.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/about.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/elaf-sky-view.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/elaf-sky-view.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/elaf-sky-view.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/guides/buying-property-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/guides/daam-sakani-guide.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/guides/index.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/index.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/guides/kenitra-vs-rabat.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/index.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/investors-international.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-international.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/investors-local.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-local.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/investors-mre.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-mre.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/services-developers.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/services-developers.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/fr/why-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/why-morocco.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/guides/buying-property-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/buying-property-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/buying-property-morocco.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/guides/daam-sakani-guide.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/daam-sakani-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/daam-sakani-guide.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/guides/index.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/index.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/guides/kenitra-vs-rabat.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/guides/kenitra-vs-rabat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/guides/kenitra-vs-rabat.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/investors-international.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-international.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-international.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/investors-local.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-local.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-local.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/investors-mre.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/investors-mre.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/investors-mre.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/services-developers.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/services-developers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/services-developers.html"/>
+    </url>
+  <url>
+      <loc>https://rahiminternational.com/why-morocco.html</loc>
+      <lastmod>2026-04-27</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://rahiminternational.com/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/why-morocco.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rahiminternational.com/why-morocco.html"/>
+    </url>
 </urlset>
