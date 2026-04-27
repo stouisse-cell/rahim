@@ -653,14 +653,14 @@
   </section>
 
   <!-- REAL ESTATE DEVELOPERS — separate section -->
-  <section style="background:var(--ink);padding:clamp(3rem,5vw,5rem) 5%;">
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.7fr);gap:4rem;align-items:center;border:1px solid rgba(210,180,134,.14);padding:3rem;">
-      <div>
-        <p style="font-size:.62rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-bottom:1rem;">Real Estate Developers</p>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--white);margin-bottom:1rem;line-height:1.2;">Strategy, Marketing<br>and Sales Execution.</h2>
-        <p style="font-size:.9rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,.6);max-width:560px;">For real estate developers who need commercial strategy, professional marketing materials, and access to qualified buyers beyond local networks. Not a broker — a commercial partner.</p>
+  <section class="developers-section" id="for-developers">
+    <div class="developers-card">
+      <div class="developers-copy">
+        <p class="developers-eyebrow">Real Estate Developers</p>
+        <h2 class="developers-title">Strategy, Marketing<br>and Sales Execution.</h2>
+        <p class="developers-body">For real estate developers who need commercial strategy, professional marketing materials, and access to qualified buyers beyond local networks. Not a broker — a commercial partner.</p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;">
+      <div class="developers-actions">
         <a href="services-developers.html" class="btn-gold">View Developer Services</a>
         <a href="index.html#contact" class="btn-outline-dark">Request a Partnership Proposal</a>
       </div>
@@ -675,10 +675,10 @@
     <div class="elaf-grid">
       <div>
         <div data-gallery class="gallery-wrap">
-          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active">
-          <img src="elaf-2.jpg" alt="Elaf Sky View apartment interior" class="gallery-slide">
-          <img src="elaf-3.jpg" alt="Elaf Sky View building detail" class="gallery-slide">
-          <img src="elaf-4.jpg" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide">
+          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active" decoding="async" fetchpriority="high">
+          <img src="elaf-2.jpg" alt="Elaf Sky View apartment interior" class="gallery-slide" loading="lazy" decoding="async">
+          <img src="elaf-3.jpg" alt="Elaf Sky View building detail" class="gallery-slide" loading="lazy" decoding="async">
+          <img src="elaf-4.jpg" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide" loading="lazy" decoding="async">
           <div class="gallery-overlay" aria-hidden="true"></div>
           <button class="gallery-btn gallery-prev" type="button" aria-label="Previous photo">‹</button>
           <button class="gallery-btn gallery-next" type="button" aria-label="Next photo">›</button>
@@ -888,7 +888,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="logo.png" alt="Rahim International" class="footer-brand-logo">
+      <img loading="lazy" decoding="async" src="logo.png" alt="Rahim International" class="footer-brand-logo">
       <span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span>
       <p class="footer-tagline">Real estate advisory and consulting for buyers and developers in the Rabat-Salé-Kénitra market.</p>
     </div>

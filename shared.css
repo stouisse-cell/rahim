@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap');
+
 /* ============================================================
    RAHIM INTERNATIONAL — SHARED DESIGN SYSTEM
    ============================================================ */
@@ -35,12 +37,18 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
 body {
   font-family: 'Didact Gothic', sans-serif;
   background: var(--navy);
   color: var(--text-dark);
   overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
 }
 a { color: inherit; }
 img, video, svg { display: block; max-width: 100%; }
@@ -257,6 +265,9 @@ img, video, svg { display: block; max-width: 100%; }
 .breadcrumb a:hover { color: var(--gold); }
 .breadcrumb span { color: rgba(255,255,255,0.25); }
 .breadcrumb .current { color: var(--gold); }
+@media (max-width: 1180px) {
+  .breadcrumb { margin-top: 84px; }
+}
 
 /* ============================================================
    TYPOGRAPHY UTILITIES
@@ -1250,8 +1261,6 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1180px) {
-  .site-nav { height: auto; min-height: 80px; flex-wrap: wrap; padding-top: 0.8rem; padding-bottom: 0.8rem; }
-  .nav-links { order: 3; width: 100%; justify-content: flex-start; padding: 0.3rem 0 0.2rem; overflow: visible; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .grid-4 { grid-template-columns: repeat(2,1fr); }
 }
@@ -1269,68 +1278,149 @@ footer {
   .page-hero { min-height: 60vh; }
 }
 
-@media (max-width: 680px) {
-  .site-nav { height: 84px; min-height: 84px; flex-wrap: nowrap; }
-  .brand-name { font-size: 1.05rem; }
-  .brand-subtitle { font-size: 0.44rem; letter-spacing: 0.1em; }
-  .brand-logo { width: 50px; }
-  .nav-links {
-    position: fixed;
-    top: 70px; left: 0; right: 0;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    padding: 1rem 5%;
-    background: rgba(7,17,31,0.98);
-    border-bottom: 1px solid var(--border-warm);
-    overflow: visible;
+/* Mobile nav: trigger hamburger on tablets too — 8 links + dropdowns + lang
+   switcher cannot fit horizontally on screens this size */
+@media (max-width: 1024px) {
+  .site-nav {
+    height: 72px;
+    min-height: 72px;
+    flex-wrap: nowrap;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .nav-links.is-open { display: flex; }
-  .nav-dropdown { width: 100%; }
-  .nav-dropdown-toggle::after { display: none; }
-  .nav-dropdown-menu {
-    position: static;
-    min-width: 0; width: 100%;
-    margin-top: 0.4rem;
-    padding-left: 1rem;
-    transform: none;
-    opacity: 1; visibility: visible; pointer-events: auto;
-    background: transparent; border: none; backdrop-filter: none;
-  }
-  .nav-dropdown-menu a { padding: 0.4rem 0; border-bottom: none; color: rgba(255,255,255,0.5); }
-  .nav-cta { display: none; }
+  .brand-logo { width: 56px; height: 48px; }
+  .brand-name { font-size: 1.15rem; }
+  .brand-subtitle { font-size: 0.48rem; letter-spacing: 0.12em; }
+
+  /* Hamburger button visible */
   .nav-toggle {
     display: inline-flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 42px; height: 42px;
-    border: 1px solid var(--border);
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-warm);
     background: transparent;
     color: var(--gold);
     cursor: pointer;
+    flex: 0 0 auto;
+    -webkit-tap-highlight-color: transparent;
   }
   .nav-toggle span,
   .nav-toggle::before,
   .nav-toggle::after {
     content: '';
-    width: 18px; height: 1px;
+    width: 20px;
+    height: 1px;
     background: currentColor;
     display: block;
     position: absolute;
     transition: transform 0.2s, opacity 0.2s;
   }
-  .nav-toggle::before { transform: translateY(-6px); }
-  .nav-toggle::after { transform: translateY(6px); }
+  .nav-toggle::before { transform: translateY(-7px); }
+  .nav-toggle::after  { transform: translateY(7px); }
   .nav-toggle[aria-expanded="true"] span { opacity: 0; }
   .nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
-  .nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
-  .page-hero { min-height: auto; padding: 8.5rem 5% 5rem; }
-  .page-hero-title { font-size: clamp(2.5rem,14vw,3.6rem); }
-  .guide-title { font-size: clamp(2.6rem,14vw,3.8rem); }
-  .section-title { font-size: clamp(1.9rem,8vw,2.8rem); }
+  .nav-toggle[aria-expanded="true"]::after  { transform: rotate(-45deg); }
+
+  /* Slide-down menu panel — flush against the nav, scrollable */
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    width: 100%;
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 5% 1.6rem;
+    background: rgba(7,17,31,0.98);
+    border-bottom: 1px solid var(--border-warm);
+    backdrop-filter: blur(12px);
+    z-index: 99;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links > li { width: 100%; }
+  .nav-links a,
+  .nav-dropdown-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 0;
+    font-size: 0.78rem;
+    text-align: left;
+  }
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-toggle::after { display: none; }
+  .nav-dropdown-menu {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-left: 1rem;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+  }
+  .nav-dropdown-menu a {
+    padding: 0.55rem 0;
+    border-bottom: none;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    text-transform: none;
+    letter-spacing: 0.06em;
+  }
+  .nav-cta {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 0.6rem;
+    padding: 0.9rem 1.2rem;
+  }
+  /* Language switcher inside the panel — keep options inline */
+  .language-switcher {
+    flex-direction: row;
+    gap: 0.4rem;
+    padding-top: 0.8rem;
+    margin-top: 0.4rem;
+    border-top: 1px solid rgba(210,180,134,0.12);
+  }
+  .language-switcher a {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.66rem;
+  }
+
+  /* Hide the standalone Enquire CTA next to the hamburger — the same
+     link appears inside the open menu panel, so showing it twice
+     pushes the layout off the right edge */
+  .site-nav > .nav-cta { display: none; }
+
+  /* Lock background scroll while the menu is open */
+  body.nav-open { overflow: hidden; }
+
+  /* Re-anchor breadcrumb under the shorter mobile nav */
+  .breadcrumb { margin-top: 72px; }
+}
+
+@media (max-width: 680px) {
+  .brand-name { font-size: 1rem; letter-spacing: 0.06em; }
+  .brand-subtitle { font-size: 0.42rem; letter-spacing: 0.1em; }
+  .brand-logo { width: 48px; height: 42px; }
+
+  .page-hero { min-height: auto; padding: 7.5rem 5% 4rem; }
+  .page-hero-title { font-size: clamp(2.2rem,11vw,3.4rem); }
+  .guide-title { font-size: clamp(2.2rem,11vw,3.4rem); }
+  .section-title { font-size: clamp(1.8rem,7vw,2.6rem); }
   .guide-grid { grid-template-columns: 1fr; }
   .grid-3,
   .grid-4,
@@ -1345,7 +1435,34 @@ footer {
   .step-num { font-size: 2.4rem; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .float-buttons { bottom: 1.5rem; right: 1.2rem; }
+  .float-buttons { bottom: 1.2rem; right: 1rem; }
+}
+
+/* Hide the vertical "Scroll" indicator on small screens — it overlaps
+   the floating action buttons and crowds the hero */
+@media (max-width: 900px) {
+  .hero-scroll { display: none !important; }
+}
+
+/* Allow very long words (especially Arabic) to wrap inside narrow
+   mobile containers instead of pushing the page wider */
+@media (max-width: 1024px) {
+  .hero-title,
+  .hero-content p,
+  .section-title,
+  h1, h2, h3 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+/* On phones, the homepage hero title needs a smaller floor than the
+   desktop clamp provides */
+@media (max-width: 680px) {
+  .hero-title { font-size: clamp(2.4rem, 10vw, 3.6rem) !important; line-height: 1.08 !important; }
+  .hero-sub { font-size: 0.9rem !important; line-height: 1.75 !important; }
+  .hero { padding-bottom: 4rem !important; }
+  .hero-actions { gap: 0.8rem !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1397,10 +1514,158 @@ footer {
 }
 
 /* ============================================================
+   GALLERY — soft shimmer placeholder while photos decode
+   Sits on the wrapper so it shows through any not-yet-painted slide.
+   The active slide fades in on top and hides it.
+   ============================================================ */
+[data-gallery] {
+  background-color: var(--navy);
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  animation: gallery-shimmer 2.4s ease-in-out infinite;
+}
+@keyframes gallery-shimmer {
+  0%   { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-gallery] { animation: none; }
+}
+
+/* ============================================================
+   ELAF SKY VIEW — gallery + project-info two-column block
+   Stacks on phones/tablets so the carousel doesn't get crushed
+   ============================================================ */
+.elaf-gallery-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.7fr);
+  gap: 3rem;
+  align-items: start;
+}
+.elaf-gallery-grid > div { min-width: 0; }
+
+@media (max-width: 900px) {
+  .elaf-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+/* Make the carousel a bit shorter on small phones so it doesn't dominate
+   the viewport, and give the prev/next buttons safer touch targets */
+@media (max-width: 680px) {
+  .gallery-wrap { min-height: 260px; }
+  .gallery-btn { width: 38px; height: 38px; font-size: 1.5rem; }
+  .gallery-prev { left: 0.6rem; }
+  .gallery-next { right: 0.6rem; }
+  .gallery-dots { right: 0.9rem; bottom: 0.9rem; }
+  .gallery-label { left: 0.9rem; bottom: 0.9rem; }
+  .gallery-name { font-size: 1.05rem; }
+}
+
+/* ============================================================
+   HOMEPAGE — REAL ESTATE DEVELOPERS CARD
+   2-column on desktop, single column on phones/tablets
+   ============================================================ */
+.developers-section {
+  background: var(--ink);
+  padding: clamp(3rem, 5vw, 5rem) 5%;
+}
+.developers-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 4rem;
+  align-items: center;
+  border: 1px solid rgba(210, 180, 134, 0.14);
+  padding: 3rem;
+}
+.developers-copy { min-width: 0; }
+.developers-eyebrow {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 1rem;
+}
+.developers-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.developers-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 560px;
+}
+.developers-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  min-width: 0;
+}
+.developers-actions .btn-gold,
+.developers-actions .btn-outline-dark { width: 100%; text-align: center; }
+
+/* Arabic variant: feature-list card on the right instead of buttons */
+.developers-aside {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(210, 180, 134, 0.15);
+  padding: 2.5rem;
+  min-width: 0;
+}
+.developers-aside-title {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.developers-aside-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+.developers-aside-list li {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+}
+.developers-aside-list li > span:first-child { color: var(--copper); }
+
+@media (max-width: 900px) {
+  .developers-card {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    padding: 2rem 1.5rem;
+  }
+  .developers-actions { align-items: stretch; }
+  .developers-actions .btn-gold,
+  .developers-actions .btn-outline-dark { width: 100%; }
+  .developers-aside { padding: 1.75rem 1.5rem; }
+}
+
+/* ============================================================
    RTL / ARABIC OVERRIDES
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap');
-
 [dir="rtl"] {
   font-family: 'Tajawal', 'Didact Gothic', sans-serif;
 }
@@ -1466,8 +1731,11 @@ footer {
 
 /* Mobile nav: anchor flush right in RTL, dropdown indent on the right */
 [dir="rtl"] .nav-links { justify-content: flex-end; }
-@media (max-width: 680px) {
-  [dir="rtl"] .nav-links { align-items: flex-end; }
+@media (max-width: 1024px) {
+  [dir="rtl"] .nav-links a,
+  [dir="rtl"] .nav-dropdown-toggle {
+    text-align: right;
+  }
   [dir="rtl"] .nav-dropdown-menu {
     padding-left: 0;
     padding-right: 1rem;

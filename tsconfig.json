@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["vite.config.ts"],
+  "exclude": ["node_modules", "build", "dist"],
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["node"]
+  }
+}

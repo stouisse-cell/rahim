@@ -36,28 +36,51 @@
   // ---- Mobile Nav Toggle ----
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('#nav-links');
+
+  function setNavOpen(open) {
+    if (!navToggle || !navLinks) return;
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    navLinks.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+  }
+
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!isOpen));
-      navToggle.setAttribute('aria-label', !isOpen ? 'Close menu' : 'Open menu');
-      navLinks.classList.toggle('is-open', !isOpen);
+      setNavOpen(!isOpen);
     });
+    // Close after clicking a link or a dropdown item
     navLinks.addEventListener('click', (e) => {
       if (e.target.matches('a')) {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open menu');
-        navLinks.classList.remove('is-open');
+        setNavOpen(false);
       }
     });
     // Close on outside click
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.site-nav') && navLinks.classList.contains('is-open')) {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Open menu');
-        navLinks.classList.remove('is-open');
+      if (
+        !e.target.closest('.site-nav') &&
+        navLinks.classList.contains('is-open')
+      ) {
+        setNavOpen(false);
       }
     });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('is-open')) {
+        setNavOpen(false);
+      }
+    });
+    // Reset state when crossing back to desktop layout
+    const resetOnResize = () => {
+      if (
+        window.innerWidth > 1024 &&
+        navLinks.classList.contains('is-open')
+      ) {
+        setNavOpen(false);
+      }
+    };
+    window.addEventListener('resize', resetOnResize);
   }
 
   // ---- Reveal on scroll ----
@@ -104,6 +127,45 @@
       if (e.key === 'ArrowLeft') { showSlide(activeIndex - 1); startAuto(); }
       if (e.key === 'ArrowRight') { showSlide(activeIndex + 1); startAuto(); }
     });
+
+    // Touch swipe nav (mobile)
+    // In RTL pages a left-swipe should still feel like "next" visually,
+    // so we mirror the direction when the page is RTL.
+    const isRTL = document.documentElement.dir === 'rtl';
+    const SWIPE_THRESHOLD = 40;
+    const SWIPE_MAX_VERTICAL = 60;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchActive = false;
+
+    gallery.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchActive = true;
+      clearInterval(autoTimer);
+    }, { passive: true });
+
+    gallery.addEventListener('touchend', (e) => {
+      if (!touchActive) return;
+      touchActive = false;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchStartX;
+      const dy = t.clientY - touchStartY;
+      // Ignore taps and mostly-vertical scrolls
+      if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dy) > SWIPE_MAX_VERTICAL) {
+        if (slides.length > 1) startAuto();
+        return;
+      }
+      const goNext = isRTL ? dx > 0 : dx < 0;
+      showSlide(activeIndex + (goNext ? 1 : -1));
+      startAuto();
+    }, { passive: true });
+
+    gallery.addEventListener('touchcancel', () => {
+      touchActive = false;
+      if (slides.length > 1) startAuto();
+    }, { passive: true });
 
     if (slides.length > 1) startAuto();
   });

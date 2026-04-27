@@ -652,21 +652,21 @@
   </section>
 
   <!-- REAL ESTATE DEVELOPERS — separate section -->
-  <section style="background:var(--ink);padding:clamp(3rem,5vw,5rem) 5%;">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,0.8fr);gap:5rem;align-items:center;">
-      <div>
-        <p class="section-eyebrow" style="color:var(--copper);">للمطورين العقاريين</p>
-        <h2 class="section-title" style="color:var(--white);">حوّل مشروعك الجيد<br>إلى فرصة واضحة.</h2>
-        <p style="font-size:.95rem;font-weight:300;line-height:1.9;color:rgba(255,255,255,.6);margin-bottom:2.2rem;">تفتقر المشاريع القوية في منطقة القنيطرة والرباط وسلا أحياناً إلى البنية التحتية التسويقية والاستراتيجية التي تستحقها. نحن نساعد المطورين على سد هذه الفجوة من خلال التحليل، وتحديد الموقع، والتسويق الاحترافي، والوصول إلى المشترين خارج الشبكات المحلية.</p>
+  <section class="developers-section">
+    <div class="developers-card developers-card--ar">
+      <div class="developers-copy">
+        <p class="developers-eyebrow">للمطورين العقاريين</p>
+        <h2 class="developers-title">حوّل مشروعك الجيد<br>إلى فرصة واضحة.</h2>
+        <p class="developers-body" style="margin-bottom:2.2rem;">تفتقر المشاريع القوية في منطقة القنيطرة والرباط وسلا أحياناً إلى البنية التحتية التسويقية والاستراتيجية التي تستحقها. نحن نساعد المطورين على سد هذه الفجوة من خلال التحليل، وتحديد الموقع، والتسويق الاحترافي، والوصول إلى المشترين خارج الشبكات المحلية.</p>
         <a href="services-developers.html" class="btn-gold">اكتشف خدمات المطورين</a>
       </div>
-      <div class="reveal" style="background:rgba(255,255,255,.03);border:1px solid rgba(210,180,134,.15);padding:2.5rem;">
-        <div style="font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">مجالات خبرتنا للمطورين</div>
-        <ul style="list-style:none;padding:0;display:grid;gap:1.2rem;">
-          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> استراتيجية المشروع وتحديد موقعه في السوق</li>
-          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> التسويق الموجه والعلامة التجارية العقارية</li>
-          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> تنفيذ المبيعات وإدارة علاقات المشترين</li>
-          <li style="display:flex;gap:1rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;"><span style="color:var(--copper);">•</span> أبحاث السوق وتحليل المنافسين</li>
+      <div class="developers-aside reveal">
+        <div class="developers-aside-title">مجالات خبرتنا للمطورين</div>
+        <ul class="developers-aside-list">
+          <li><span>•</span> استراتيجية المشروع وتحديد موقعه في السوق</li>
+          <li><span>•</span> التسويق الموجه والعلامة التجارية العقارية</li>
+          <li><span>•</span> تنفيذ المبيعات وإدارة علاقات المشترين</li>
+          <li><span>•</span> أبحاث السوق وتحليل المنافسين</li>
         </ul>
       </div>
     </div>
@@ -674,10 +674,10 @@
 
   <!-- GALLERY -->
   <section class="gallery-wrap" aria-label="معرض المشاريع والمنطقة">
-    <img src="../elaf.jpg" alt="Elaf Sky View - مشروع سكني في القنيطرة" class="gallery-slide is-active">
-    <img src="../elaf-2.jpg" alt="Elaf Sky View - التصميم الخارجي" class="gallery-slide">
-    <img src="../kenitra1.png" alt="منظر لمدينة القنيطرة" class="gallery-slide">
-    <img src="../plagemehdia.webp" alt="شاطئ مهدية بالقرب من القنيطرة" class="gallery-slide">
+    <img src="../elaf.jpg" alt="Elaf Sky View - مشروع سكني في القنيطرة" class="gallery-slide is-active" decoding="async" fetchpriority="high">
+    <img src="../elaf-2.jpg" alt="Elaf Sky View - التصميم الخارجي" class="gallery-slide" loading="lazy" decoding="async">
+    <img src="../kenitra1.png" alt="منظر لمدينة القنيطرة" class="gallery-slide" loading="lazy" decoding="async">
+    <img src="../plagemehdia.webp" alt="شاطئ مهدية بالقرب من القنيطرة" class="gallery-slide" loading="lazy" decoding="async">
     <div class="gallery-overlay"></div>
     <button class="gallery-btn gallery-prev" type="button" aria-label="الصورة السابقة">‹</button>
     <button class="gallery-btn gallery-next" type="button" aria-label="الصورة التالية">›</button>

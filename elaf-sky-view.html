@@ -562,13 +562,13 @@
     <p class="section-eyebrow">Project Overview</p>
     <h2 class="section-title" style="color:var(--navy);">High-Spec Apartments<br>in Centre Ville Kénitra.</h2>
     <p style="font-size:0.92rem;font-weight:300;line-height:1.9;color:var(--text-muted);max-width:660px;margin-bottom:3rem;">Elaf Sky View introduces thoughtfully designed apartments in one of Morocco's fastest-growing cities, with a rare balance of affordable luxury, practical infrastructure, and everyday convenience.</p>
-    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,0.7fr);gap:3rem;align-items:start;">
+    <div class="elaf-gallery-grid">
       <div>
         <div id="gallery" class="gallery-wrap" data-gallery style="border:1px solid var(--border);">
-          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active">
-          <img src="elaf-interior.png" alt="Elaf Sky View apartment interior finishes" class="gallery-slide">
-          <img src="elaf-kitchen.png" alt="Elaf Sky View fully equipped kitchen" class="gallery-slide">
-          <img src="elaf-location.png" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide">
+          <img src="elaf.jpg" alt="Elaf Sky View residential development in central Kénitra" class="gallery-slide is-active" decoding="async" fetchpriority="high">
+          <img src="elaf-interior.png" alt="Elaf Sky View apartment interior finishes" class="gallery-slide" loading="lazy" decoding="async">
+          <img src="elaf-kitchen.png" alt="Elaf Sky View fully equipped kitchen" class="gallery-slide" loading="lazy" decoding="async">
+          <img src="elaf-location.png" alt="Elaf Sky View neighbourhood and city context" class="gallery-slide" loading="lazy" decoding="async">
           <div class="gallery-img-overlay" aria-hidden="true"></div>
           <button class="gallery-btn gallery-prev" type="button" aria-label="Previous photo">‹</button>
           <button class="gallery-btn gallery-next" type="button" aria-label="Next photo">›</button>
@@ -625,7 +625,7 @@
   <section class="bg-navy-grad" style="padding:var(--section-pad);">
     <div class="split split-center">
       <div style="min-height:420px;background:var(--navy-mid);border:1px solid var(--border-warm);overflow:hidden;position:relative;" class="reveal">
-        <img src="elaf-map.png" alt="Map showing Elaf Sky View location in Centre Ville Kénitra" style="width:100%;height:100%;object-fit:cover;min-height:420px;">
+        <img loading="lazy" decoding="async" src="elaf-map.png" alt="Map showing Elaf Sky View location in Centre Ville Kénitra" style="width:100%;height:100%;object-fit:cover;min-height:420px;">
       </div>
       <div>
         <p class="section-eyebrow">Location</p>
@@ -763,7 +763,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="logo.png" alt="Rahim International" class="footer-brand-logo">
+      <img loading="lazy" decoding="async" src="logo.png" alt="Rahim International" class="footer-brand-logo">
       <span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span>
       <p class="footer-tagline">Real estate advisory and consulting for buyers and developers in the Rabat-Salé-Kénitra market.</p>
     </div>
