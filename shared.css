@@ -1057,6 +1057,7 @@ footer {
 }
 .footer-brand { display: flex; flex-direction: column; gap: 1rem; }
 .footer-brand-logo { width: 40px; height: auto; }
+.footer-logo { width: 40px; height: auto; }
 .footer-tagline {
   font-size: 0.82rem;
   font-weight: 300;
