@@ -688,6 +688,79 @@
     </div>
   </section>
 
+  <!-- MORTGAGE / DAAM SAKANI CALCULATOR -->
+  <section id="financing" class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Mortgage Calculator</p>
+    <h2 class="section-title" style="color:var(--white);">Estimate Your<br>Monthly Payment.</h2>
+    <p class="body-text" style="color:rgba(255,255,255,0.7);max-width:720px;">A 700,000 MAD apartment at Elaf Sky View sits at the top of the Daam Sakani Tier 2 band — qualifying first-time buyers receive a 70,000 MAD direct subsidy from the Moroccan state. Adjust the figures below to model your own scenario.</p>
+
+    <div class="calc-grid" data-mortgage-calc data-locale="en">
+      <div class="calc-inputs">
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-price-en">Property Price</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-price-en" class="form-input" type="number" inputmode="numeric" min="0" step="10000" value="700000" data-input="price">
+            <span class="calc-suffix">MAD</span>
+          </div>
+        </div>
+
+        <div class="calc-checkbox-row">
+          <input id="calc-daam-en" type="checkbox" checked data-input="daam">
+          <label for="calc-daam-en">Apply <strong>Daam Sakani</strong> grant if eligible (first-time buyer, primary residence)</label>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-down-en">Down Payment</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-down-en" class="form-input" type="number" inputmode="numeric" min="0" max="100" step="1" value="20" data-input="down-pct">
+            <span class="calc-suffix">%</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-term-en">Loan Term</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-term-en" class="form-input" type="number" inputmode="numeric" min="1" max="30" step="1" value="20" data-input="term">
+            <span class="calc-suffix">years</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-rate-en">Interest Rate</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-rate-en" class="form-input" type="number" inputmode="decimal" min="0" max="20" step="0.05" value="5" data-input="rate">
+            <span class="calc-suffix">% / yr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-results" aria-live="polite">
+        <div class="calc-result-row">
+          <span class="calc-result-label">Daam Sakani Grant<small data-output="grant-note"></small></span>
+          <span class="calc-result-value">−<span data-output="grant">70,000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Your Down Payment</span>
+          <span class="calc-result-value">−<span data-output="down-amount">140,000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Loan Amount<small>What the bank finances</small></span>
+          <span class="calc-result-value"><span data-output="loan">490,000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row calc-result-hero">
+          <span class="calc-result-label">Estimated Monthly Payment</span>
+          <span class="calc-result-value"><span data-output="monthly">3,234</span><span class="unit">MAD / month</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Total Interest Paid<small>Over the full loan term</small></span>
+          <span class="calc-result-value"><span data-output="total-interest">286,160</span><span class="unit">MAD</span></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer">Indicative figures only. Moroccan housing-loan rates currently range 4.5–5.5% per year. Final terms depend on your bank, your file, and Daam Sakani approval — we coordinate the full process for serious buyers. <a href="#contact">Talk to us.</a></p>
+  </section>
+
   <!-- OUR ROLE -->
   <section class="bg-cream" style="padding:var(--section-pad);">
     <div class="split split-center">

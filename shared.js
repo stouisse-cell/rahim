@@ -220,4 +220,81 @@
     });
   });
 
+  // ---- Mortgage / Daam Sakani Calculator ----
+  function getDaamSakaniGrant(price) {
+    if (price <= 0) return 0;
+    if (price <= 300000) return 100000;
+    if (price <= 700000) return 70000;
+    return 0;
+  }
+
+  document.querySelectorAll('[data-mortgage-calc]').forEach((calc) => {
+    const locale = calc.dataset.locale || 'en';
+    const localeTag = locale === 'ar' ? 'ar-MA' : (locale === 'fr' ? 'fr-MA' : 'en-US');
+    const fmt = new Intl.NumberFormat(localeTag, { maximumFractionDigits: 0 });
+
+    const inputs = {
+      price:   calc.querySelector('[data-input="price"]'),
+      daam:    calc.querySelector('[data-input="daam"]'),
+      downPct: calc.querySelector('[data-input="down-pct"]'),
+      term:    calc.querySelector('[data-input="term"]'),
+      rate:    calc.querySelector('[data-input="rate"]'),
+    };
+    const outputs = {
+      grant:         calc.querySelector('[data-output="grant"]'),
+      downAmount:    calc.querySelector('[data-output="down-amount"]'),
+      loan:          calc.querySelector('[data-output="loan"]'),
+      monthly:       calc.querySelector('[data-output="monthly"]'),
+      totalInterest: calc.querySelector('[data-output="total-interest"]'),
+      grantNote:     calc.querySelector('[data-output="grant-note"]'),
+    };
+
+    const grantNoteText = {
+      en: { tier1: 'Tier 1 — social housing band', tier2: 'Tier 2 — middle market band', none: 'Above the 700,000 MAD ceiling' },
+      fr: { tier1: 'Palier 1 — logement social', tier2: 'Palier 2 — gamme intermédiaire', none: 'Au-dessus du plafond de 700 000 MAD' },
+      ar: { tier1: 'الشريحة 1 — السكن الاجتماعي', tier2: 'الشريحة 2 — السوق المتوسط', none: 'فوق سقف 700,000 درهم' },
+    }[locale] || { tier1: '', tier2: '', none: '' };
+
+    function recalc() {
+      const price   = Math.max(0, Number(inputs.price.value) || 0);
+      const daamOn  = inputs.daam ? inputs.daam.checked : false;
+      const grant   = daamOn ? getDaamSakaniGrant(price) : 0;
+      const downPct = Math.min(100, Math.max(0, Number(inputs.downPct.value) || 0));
+      const downAmt = Math.round(price * downPct / 100);
+      const term    = Math.max(1, Number(inputs.term.value) || 20);
+      const rate    = Math.max(0, Number(inputs.rate.value) || 0) / 100;
+
+      const loan = Math.max(0, price - grant - downAmt);
+      const months = term * 12;
+      const monthlyRate = rate / 12;
+      let monthly = 0;
+      if (loan > 0 && months > 0) {
+        monthly = monthlyRate === 0
+          ? loan / months
+          : (loan * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -months));
+      }
+      const totalCost = monthly * months;
+      const totalInterest = totalCost - loan;
+
+      if (outputs.grant)         outputs.grant.textContent         = fmt.format(grant);
+      if (outputs.downAmount)    outputs.downAmount.textContent    = fmt.format(downAmt);
+      if (outputs.loan)          outputs.loan.textContent          = fmt.format(loan);
+      if (outputs.monthly)       outputs.monthly.textContent       = fmt.format(Math.round(monthly));
+      if (outputs.totalInterest) outputs.totalInterest.textContent = fmt.format(Math.round(totalInterest));
+      if (outputs.grantNote) {
+        if (!daamOn) outputs.grantNote.textContent = '';
+        else if (price <= 300000) outputs.grantNote.textContent = grantNoteText.tier1;
+        else if (price <= 700000) outputs.grantNote.textContent = grantNoteText.tier2;
+        else outputs.grantNote.textContent = grantNoteText.none;
+      }
+    }
+
+    Object.values(inputs).forEach((el) => {
+      if (!el) return;
+      el.addEventListener('input', recalc);
+      el.addEventListener('change', recalc);
+    });
+    recalc();
+  });
+
 })();

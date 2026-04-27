@@ -714,6 +714,79 @@
     </div>
   </section>
 
+  <!-- حاسبة القرض العقاري / دعم سكني -->
+  <section id="financing" class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">حاسبة القرض العقاري</p>
+    <h2 class="section-title" style="color:var(--white);">احسب قسطك<br>الشهري.</h2>
+    <p class="body-text" style="color:rgba(255,255,255,0.7);max-width:720px;">شقة بسعر 700,000 درهم في Elaf Sky View تقع في أعلى الشريحة الثانية من برنامج دعم سكني — يحصل المشترون لأول مرة المؤهلون على منحة مباشرة قدرها 70,000 درهم من الدولة المغربية. عدّل الأرقام أدناه لمحاكاة سيناريوهك الخاص.</p>
+
+    <div class="calc-grid" data-mortgage-calc data-locale="ar">
+      <div class="calc-inputs">
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-price-ar">ثمن العقار</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-price-ar" class="form-input" type="number" inputmode="numeric" min="0" step="10000" value="700000" data-input="price" dir="ltr">
+            <span class="calc-suffix">درهم</span>
+          </div>
+        </div>
+
+        <div class="calc-checkbox-row">
+          <input id="calc-daam-ar" type="checkbox" checked data-input="daam">
+          <label for="calc-daam-ar">تطبيق منحة <strong>دعم سكني</strong> عند الاستحقاق (مشترٍ لأول مرة، سكن رئيسي)</label>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-down-ar">المساهمة الشخصية</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-down-ar" class="form-input" type="number" inputmode="numeric" min="0" max="100" step="1" value="20" data-input="down-pct" dir="ltr">
+            <span class="calc-suffix">%</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-term-ar">مدة القرض</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-term-ar" class="form-input" type="number" inputmode="numeric" min="1" max="30" step="1" value="20" data-input="term" dir="ltr">
+            <span class="calc-suffix">سنوات</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-rate-ar">نسبة الفائدة</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-rate-ar" class="form-input" type="number" inputmode="decimal" min="0" max="20" step="0.05" value="5" data-input="rate" dir="ltr">
+            <span class="calc-suffix">% / سنة</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-results" aria-live="polite">
+        <div class="calc-result-row">
+          <span class="calc-result-label">منحة دعم سكني<small data-output="grant-note"></small></span>
+          <span class="calc-result-value">−<span data-output="grant">70,000</span><span class="unit">درهم</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">مساهمتك الشخصية</span>
+          <span class="calc-result-value">−<span data-output="down-amount">140,000</span><span class="unit">درهم</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">مبلغ القرض<small>ما يموّله البنك</small></span>
+          <span class="calc-result-value"><span data-output="loan">490,000</span><span class="unit">درهم</span></span>
+        </div>
+        <div class="calc-result-row calc-result-hero">
+          <span class="calc-result-label">القسط الشهري التقديري</span>
+          <span class="calc-result-value"><span data-output="monthly">3,234</span><span class="unit">درهم / شهر</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">مجموع الفوائد<small>على كامل مدة القرض</small></span>
+          <span class="calc-result-value"><span data-output="total-interest">286,160</span><span class="unit">درهم</span></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer">أرقام إرشادية فقط. تتراوح أسعار القروض السكنية في المغرب حالياً بين 4.5٪ و 5.5٪ سنوياً. تعتمد الشروط النهائية على البنك وملفك وموافقة دعم سكني — ننسق العملية بالكامل للمشترين الجادين. <a href="#contact">تواصل معنا.</a></p>
+  </section>
+
   <!-- CONTACT / CTA -->
   <section class="contact-section" style="padding:var(--section-pad);" id="contact">
     <p class="section-eyebrow">اتصل بنا</p>

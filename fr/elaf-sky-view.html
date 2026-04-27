@@ -684,6 +684,79 @@
     </div>
   </section>
 
+  <!-- CALCULATEUR DE CRÉDIT / DAAM SAKANI -->
+  <section id="financing" class="bg-navy" style="padding:var(--section-pad);">
+    <p class="section-eyebrow">Calculateur de Crédit</p>
+    <h2 class="section-title" style="color:var(--white);">Estimez Votre<br>Mensualité.</h2>
+    <p class="body-text" style="color:rgba(255,255,255,0.7);max-width:720px;">Un appartement à 700 000 MAD chez Elaf Sky View se situe au sommet du Palier 2 de Daam Sakani — les primo-accédants éligibles reçoivent une subvention directe de 70 000 MAD de l'État marocain. Ajustez les chiffres ci-dessous pour modéliser votre propre scénario.</p>
+
+    <div class="calc-grid" data-mortgage-calc data-locale="fr">
+      <div class="calc-inputs">
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-price-fr">Prix du Bien</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-price-fr" class="form-input" type="number" inputmode="numeric" min="0" step="10000" value="700000" data-input="price">
+            <span class="calc-suffix">MAD</span>
+          </div>
+        </div>
+
+        <div class="calc-checkbox-row">
+          <input id="calc-daam-fr" type="checkbox" checked data-input="daam">
+          <label for="calc-daam-fr">Appliquer la prime <strong>Daam Sakani</strong> si éligible (primo-accédant, résidence principale)</label>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-down-fr">Apport Personnel</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-down-fr" class="form-input" type="number" inputmode="numeric" min="0" max="100" step="1" value="20" data-input="down-pct">
+            <span class="calc-suffix">%</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-term-fr">Durée du Prêt</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-term-fr" class="form-input" type="number" inputmode="numeric" min="1" max="30" step="1" value="20" data-input="term">
+            <span class="calc-suffix">années</span>
+          </div>
+        </div>
+
+        <div class="calc-input-row">
+          <label class="form-label" for="calc-rate-fr">Taux d'Intérêt</label>
+          <div class="calc-suffix-wrap">
+            <input id="calc-rate-fr" class="form-input" type="number" inputmode="decimal" min="0" max="20" step="0.05" value="5" data-input="rate">
+            <span class="calc-suffix">% / an</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-results" aria-live="polite">
+        <div class="calc-result-row">
+          <span class="calc-result-label">Prime Daam Sakani<small data-output="grant-note"></small></span>
+          <span class="calc-result-value">−<span data-output="grant">70 000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Votre Apport</span>
+          <span class="calc-result-value">−<span data-output="down-amount">140 000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Montant du Prêt<small>Ce que la banque finance</small></span>
+          <span class="calc-result-value"><span data-output="loan">490 000</span><span class="unit">MAD</span></span>
+        </div>
+        <div class="calc-result-row calc-result-hero">
+          <span class="calc-result-label">Mensualité Estimée</span>
+          <span class="calc-result-value"><span data-output="monthly">3 234</span><span class="unit">MAD / mois</span></span>
+        </div>
+        <div class="calc-result-row">
+          <span class="calc-result-label">Intérêts Totaux<small>Sur la durée totale du prêt</small></span>
+          <span class="calc-result-value"><span data-output="total-interest">286 160</span><span class="unit">MAD</span></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer">Chiffres indicatifs uniquement. Les taux des prêts immobiliers marocains se situent actuellement entre 4,5 % et 5,5 % par an. Les conditions finales dépendent de votre banque, de votre dossier et de l'approbation Daam Sakani — nous coordonnons l'ensemble du processus pour les acheteurs sérieux. <a href="#contact">Contactez-nous.</a></p>
+  </section>
+
   <!-- OUR ROLE -->
   <section class="bg-cream" style="padding:var(--section-pad);">
     <div class="split split-center">
