@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عقارات للبيع | Rahim International — الرباط-سلا-القنيطرة</title>
+<meta name="description" content="استعرض عقاراتنا الحالية للبيع في جهة الرباط-سلا-القنيطرة. شقق وفيلات ومشاريع قيد الإنشاء انتقتها Rahim International.">
+<link rel="canonical" href="https://rahiminternational.com/ar/properties.html">
+<link rel="alternate" hreflang="en" href="https://rahiminternational.com/properties.html">
+<link rel="alternate" hreflang="fr" href="https://rahiminternational.com/fr/properties.html">
+<link rel="alternate" hreflang="ar" href="https://rahiminternational.com/ar/properties.html">
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Didact+Gothic&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../shared.css">
+<style>
+  body { font-family: 'Noto Naskh Arabic', 'Didact Gothic', sans-serif; }
+  .listings-hero { padding: 9rem 5% 3rem; background: var(--ink); color: var(--white); }
+  .listings-hero h1 { font-family: 'Cormorant Garamond', 'Noto Naskh Arabic', serif; font-weight: 300; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.2; margin-bottom: 1rem; }
+  .listings-hero h1 em { font-style: normal; color: var(--gold); }
+  .listings-hero p { max-width: 640px; opacity: .75; line-height: 1.8; font-weight: 300; }
+  .filters { padding: 2rem 5%; background: #f6f3ee; border-bottom: 1px solid rgba(0,0,0,.06); }
+  .filters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; align-items: end; }
+  .filters label { display: block; font-size: 0.75rem; letter-spacing: 0; color: var(--ink); opacity: .8; margin-bottom: 0.4rem; }
+  .filters select, .filters input { width: 100%; padding: 0.7rem 0.9rem; border: 1px solid rgba(0,0,0,.18); background: #fff; font-family: inherit; font-size: 0.9rem; color: var(--ink); border-radius: 2px; }
+  .filters .btn-reset { padding: 0.7rem 1rem; background: transparent; border: 1px solid var(--ink); color: var(--ink); cursor: pointer; font-size: 0.85rem; }
+  .listings { padding: 3rem 5% 6rem; background: #fff; }
+  .listings-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; font-size: 0.9rem; color: rgba(0,0,0,.6); }
+  .listings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+  .property-card { background: #fff; border: 1px solid rgba(0,0,0,.08); overflow: hidden; transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+  .property-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(8,26,51,.12); }
+  .property-card a.card-link { display: block; text-decoration: none; color: inherit; }
+  .property-card .img-wrap { aspect-ratio: 4 / 3; background: #eee linear-gradient(135deg, #d9d3c5, #b9a98d); overflow: hidden; position: relative; }
+  .property-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .property-card:hover .img-wrap img { transform: scale(1.05); }
+  .property-card .badge { position: absolute; top: 1rem; right: 1rem; background: var(--copper); color: #fff; padding: 0.3rem 0.7rem; font-size: 0.75rem; }
+  .property-card .badge.featured { background: var(--gold); color: var(--ink); }
+  .property-card .body { padding: 1.4rem 1.4rem 1.6rem; }
+  .property-card .city { font-size: 0.78rem; color: var(--copper); margin-bottom: 0.4rem; }
+  .property-card h3 { font-family: 'Cormorant Garamond', 'Noto Naskh Arabic', serif; font-weight: 500; font-size: 1.4rem; line-height: 1.4; margin-bottom: 0.6rem; color: var(--ink); }
+  .property-card .price { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--ink); margin-bottom: 0.8rem; }
+  .property-card .specs { display: flex; gap: 1rem; font-size: 0.85rem; color: rgba(0,0,0,.6); border-top: 1px solid rgba(0,0,0,.06); padding-top: 0.8rem; }
+  .property-card .specs span strong { color: var(--ink); font-weight: 500; }
+  .empty-state { text-align: center; padding: 4rem 1rem; color: rgba(0,0,0,.55); }
+  .empty-state h3 { font-family: 'Cormorant Garamond', 'Noto Naskh Arabic', serif; font-weight: 400; font-size: 2rem; color: var(--ink); margin-bottom: 0.6rem; }
+</style>
+</head>
+<body>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="التنقل الرئيسي">
+  <a href="index.html" class="brand">
+    <img src="../logo.png" alt="" class="brand-logo">
+    <span class="brand-text"><span class="brand-name">Rahim <span>International</span></span><span class="brand-subtitle">استشارات عقارية</span></span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="فتح القائمة" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="properties.html" class="active">العقارات</a></li>
+    <li><a href="about.html">من نحن</a></li>
+    <li><a href="services-developers.html">المطورون</a></li>
+    <li><a href="why-morocco.html">لماذا القنيطرة</a></li>
+    <li><a href="index.html#contact">اتصل</a></li>
+    <li class="language-switcher">
+      <a href="../properties.html">EN</a>
+      <a href="../fr/properties.html">FR</a>
+      <a href="properties.html" class="active">AR</a>
+    </li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">اتصل</a>
+</nav>
+
+<section class="listings-hero">
+  <p style="font-size:.85rem;color:var(--copper);margin-bottom:1rem;">فرص حالية</p>
+  <h1>عقارات <em>منتقاة</em><br>في جهة الرباط-سلا-القنيطرة.</h1>
+  <p>شقق وفيلات ومشاريع قيد الإنشاء قمنا بمعاينتها شخصيًا — مع الوثائق ومقارنات الأسعار وسياق الحي اللازم لاتخاذ قرار مدروس.</p>
+</section>
+
+<section class="filters">
+  <form class="filters-grid" id="filters" autocomplete="off">
+    <div><label for="f-city">المدينة</label><select id="f-city" name="city"><option value="">كل المدن</option></select></div>
+    <div><label for="f-type">نوع العقار</label><select id="f-type" name="propertyType"><option value="">كل الأنواع</option></select></div>
+    <div><label for="f-status">الحالة</label>
+      <select id="f-status" name="status">
+        <option value="">الكل</option>
+        <option value="ready">جاهز</option>
+        <option value="off-plan">قيد الإنشاء</option>
+      </select>
+    </div>
+    <div><label for="f-bedrooms">عدد الغرف (الأدنى)</label>
+      <select id="f-bedrooms" name="minBedrooms">
+        <option value="">أي عدد</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+    </div>
+    <div><label for="f-min">السعر الأدنى (درهم)</label><input type="number" id="f-min" name="minPrice" min="0" step="50000" placeholder="0"></div>
+    <div><label for="f-max">السعر الأقصى (درهم)</label><input type="number" id="f-max" name="maxPrice" min="0" step="50000" placeholder="بدون حد"></div>
+    <div><button type="button" class="btn-reset" id="reset-filters">إعادة تعيين</button></div>
+  </form>
+</section>
+
+<section class="listings">
+  <div class="listings-meta"><span id="results-count">جارٍ التحميل…</span></div>
+  <div class="listings-grid" id="listings-grid"></div>
+  <div class="empty-state" id="empty-state" hidden>
+    <h3>لا توجد عقارات تطابق معاييرك</h3>
+    <p>جرّب توسيع نطاق السعر أو إزالة أحد الفلاتر — أو <a href="index.html#contact" style="color:var(--copper);">أخبرنا بما تبحث عنه</a> وسنوفّره لك.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img loading="lazy" src="../logo.png" alt="Rahim International" class="footer-brand-logo">
+      <span class="brand-name" style="margin-top:0.5rem;">Rahim <span>International</span></span>
+      <p class="footer-tagline">استشارات عقارية للمشترين والمطورين في سوق الرباط-سلا-القنيطرة.</p>
+    </div>
+    <div>
+      <div class="footer-col-label">تنقّل</div>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="properties.html">العقارات</a>
+        <a href="index.html#contact">اتصل</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Rahim International. جميع الحقوق محفوظة.</div>
+    <div class="footer-langs">
+      <a href="../properties.html">EN</a>
+      <a href="../fr/properties.html">FR</a>
+      <a href="properties.html" class="active">AR</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared.js" defer></script>
+<script src="../properties.js" defer></script>
+</body>
+</html>

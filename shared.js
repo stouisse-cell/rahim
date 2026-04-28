@@ -170,6 +170,46 @@
     if (slides.length > 1) startAuto();
   });
 
+  // ---- Lead capture (fire-and-forget to our own analytics DB) ----
+  function captureLeadFromForm(formEl) {
+    try {
+      const fd = new FormData(formEl);
+      const first = (fd.get('first_name') || '').toString().trim();
+      const last = (fd.get('last_name') || '').toString().trim();
+      const fullName = (fd.get('name') || (first + ' ' + last).trim()).toString();
+      const email = (fd.get('email') || '').toString().trim();
+      if (!email) return;
+      const params = new URLSearchParams(window.location.search);
+      const payload = {
+        name: fullName || email,
+        email,
+        phone: (fd.get('phone') || '').toString() || null,
+        message:
+          (fd.get('message') || '').toString() ||
+          (fd.get('profile') ? 'Profile: ' + fd.get('profile') : null) ||
+          (fd.get('form_type') === 'newsletter' ? 'Newsletter signup' : null),
+        sourcePage: window.location.pathname,
+        sourceLang: document.documentElement.lang || null,
+        utmSource: params.get('utm_source'),
+        utmMedium: params.get('utm_medium'),
+        utmCampaign: params.get('utm_campaign'),
+      };
+      fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch(() => {});
+    } catch (err) {
+      // Never break the user-facing form because of analytics
+    }
+  }
+
+  // Capture on every form submission (contact + newsletter forms)
+  document.querySelectorAll('form').forEach((f) => {
+    f.addEventListener('submit', () => captureLeadFromForm(f), { capture: true });
+  });
+
   // ---- Contact Form ----
   const form = document.querySelector('#contact-form');
   if (form) {
@@ -184,6 +224,9 @@
       btn.textContent = sendingTxt;
       btn.disabled = true;
       if (status) { status.textContent = ''; status.className = 'form-status'; }
+
+      // Mirror to our analytics DB (non-blocking)
+      captureLeadFromForm(form);
 
       try {
         const res = await fetch(form.action, {

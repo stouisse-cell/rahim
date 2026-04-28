@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leads | Rahim International Admin</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand">Rahim <span>International</span></div>
+    <div class="admin-sub">Admin</div>
+    <nav class="admin-nav">
+      <a href="index.html">Dashboard</a>
+      <a href="leads.html" class="active">Leads</a>
+      <a href="properties.html">Properties</a>
+    </nav>
+    <div class="admin-foot">
+      <a href="/" target="_blank">View site →</a><br>
+      <a href="#" data-logout>Sign out</a>
+    </div>
+  </aside>
+  <main class="admin-main">
+    <div class="admin-header">
+      <h1>Leads</h1>
+      <div class="actions">
+        <select id="status-filter" style="width:auto;">
+          <option value="">All statuses</option>
+          <option value="new">New</option>
+          <option value="contacted">Contacted</option>
+          <option value="qualified">Qualified</option>
+          <option value="closed">Closed</option>
+          <option value="lost">Lost</option>
+        </select>
+        <input type="text" id="search" placeholder="Search name, email, message…" style="width:280px;">
+        <button class="btn ghost" id="export-csv">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;">
+      <table class="data" id="leads-table">
+        <thead>
+          <tr>
+            <th>Received</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody><tr><td colspan="6" style="padding:2rem;color:var(--muted);">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal" id="modal-body"></div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+  let allLeads = [];
+  const tbody = document.querySelector('#leads-table tbody');
+  const statusFilter = document.getElementById('status-filter');
+  const searchInput = document.getElementById('search');
+  const modal = document.getElementById('modal');
+  const modalBody = document.getElementById('modal-body');
+
+  async function loadLeads() {
+    try {
+      allLeads = await AdminAPI.get('/api/admin/leads');
+      render();
+      // open lead from hash
+      const m = window.location.hash.match(/^#lead-(\d+)$/);
+      if (m) openLead(Number(m[1]));
+    } catch (err) {
+      if (err.message !== 'unauthorized') {
+        tbody.innerHTML = `<tr><td colspan="6" style="padding:2rem;color:var(--bad);">Failed to load leads.</td></tr>`;
+      }
+    }
+  }
+
+  function render() {
+    const status = statusFilter.value;
+    const q = searchInput.value.trim().toLowerCase();
+    const rows = allLeads.filter((L) => {
+      if (status && L.status !== status) return false;
+      if (q) {
+        const hay = `${L.name} ${L.email} ${L.message || ''} ${L.phone || ''}`.toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      return true;
+    });
+
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="6" style="padding:2rem;color:var(--muted);">No leads match your filters.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = rows.map((L) => `
+      <tr>
+        <td style="white-space:nowrap;color:var(--muted);">${fmtDate(L.createdAt)}</td>
+        <td><strong>${escapeHtml(L.name)}</strong></td>
+        <td>
+          <a href="mailto:${escapeAttr(L.email)}">${escapeHtml(L.email)}</a>
+          ${L.phone ? `<br><a href="tel:${escapeAttr(L.phone)}" style="color:var(--muted);">${escapeHtml(L.phone)}</a>` : ''}
+        </td>
+        <td style="color:var(--muted);font-size:0.82rem;">
+          ${escapeHtml(L.sourcePage || '')}<br>
+          ${L.sourceLang ? `<span style="text-transform:uppercase;letter-spacing:.1em;">${L.sourceLang}</span>` : ''}
+          ${L.utmSource ? ` · ${escapeHtml(L.utmSource)}` : ''}
+        </td>
+        <td><span class="pill ${L.status}">${L.status}</span></td>
+        <td><button class="btn small ghost" data-open="${L.id}">Open</button></td>
+      </tr>
+    `).join('');
+
+    tbody.querySelectorAll('[data-open]').forEach((b) =>
+      b.addEventListener('click', () => openLead(Number(b.dataset.open))),
+    );
+  }
+
+  function openLead(id) {
+    const L = allLeads.find((x) => x.id === id);
+    if (!L) return;
+    window.location.hash = 'lead-' + id;
+    modalBody.innerHTML = `
+      <h2>${escapeHtml(L.name)}</h2>
+      <p style="color:var(--muted);margin-top:-0.6rem;">Received ${fmtDate(L.createdAt)}</p>
+
+      <div class="row-2">
+        <div><strong>Email</strong><br><a href="mailto:${escapeAttr(L.email)}">${escapeHtml(L.email)}</a></div>
+        <div><strong>Phone</strong><br>${L.phone ? `<a href="tel:${escapeAttr(L.phone)}">${escapeHtml(L.phone)}</a>` : '<span style="color:var(--muted);">—</span>'}</div>
+      </div>
+      <div class="row-2" style="margin-top:1rem;">
+        <div><strong>Page</strong><br><span style="color:var(--muted);">${escapeHtml(L.sourcePage || '')}</span></div>
+        <div><strong>Language</strong><br><span style="text-transform:uppercase;">${escapeHtml(L.sourceLang || '—')}</span></div>
+      </div>
+      ${L.utmSource || L.utmMedium || L.utmCampaign ? `
+        <div class="row-3" style="margin-top:1rem;">
+          <div><strong>UTM Source</strong><br>${escapeHtml(L.utmSource || '—')}</div>
+          <div><strong>UTM Medium</strong><br>${escapeHtml(L.utmMedium || '—')}</div>
+          <div><strong>UTM Campaign</strong><br>${escapeHtml(L.utmCampaign || '—')}</div>
+        </div>` : ''}
+
+      <div style="margin-top:1.4rem;">
+        <strong>Message</strong>
+        <div style="white-space:pre-wrap;background:#faf7f1;padding:1rem;border-radius:3px;margin-top:.4rem;font-size:0.9rem;line-height:1.6;">${escapeHtml(L.message || '(no message)')}</div>
+      </div>
+
+      <label class="field" style="margin-top:1.4rem;">
+        <span>Status</span>
+        <select id="m-status">
+          ${['new','contacted','qualified','closed','lost'].map((s) =>
+            `<option value="${s}" ${L.status === s ? 'selected' : ''}>${s}</option>`
+          ).join('')}
+        </select>
+      </label>
+      <label class="field">
+        <span>Internal notes</span>
+        <textarea id="m-notes" rows="4" placeholder="Follow-up notes, calls made, next steps…">${escapeHtml(L.notes || '')}</textarea>
+      </label>
+
+      <div class="modal-actions">
+        <button class="btn danger" id="m-delete">Delete</button>
+        <button class="btn ghost" id="m-close">Cancel</button>
+        <button class="btn copper" id="m-save">Save</button>
+      </div>
+    `;
+    modal.classList.add('is-open');
+
+    document.getElementById('m-close').addEventListener('click', closeModal);
+    document.getElementById('m-save').addEventListener('click', async () => {
+      const status = document.getElementById('m-status').value;
+      const notes = document.getElementById('m-notes').value;
+      try {
+        const updated = await AdminAPI.patch(`/api/admin/leads/${id}`, { status, notes });
+        Object.assign(L, updated);
+        toast('Lead updated');
+        render();
+        closeModal();
+      } catch (err) {
+        if (err.message !== 'unauthorized') toast('Save failed', 'error');
+      }
+    });
+    document.getElementById('m-delete').addEventListener('click', async () => {
+      if (!confirm(`Delete lead from ${L.name}? This cannot be undone.`)) return;
+      try {
+        await AdminAPI.del(`/api/admin/leads/${id}`);
+        allLeads = allLeads.filter((x) => x.id !== id);
+        toast('Lead deleted');
+        render();
+        closeModal();
+      } catch (err) {
+        if (err.message !== 'unauthorized') toast('Delete failed', 'error');
+      }
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    if (window.location.hash.startsWith('#lead-')) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+  }
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  statusFilter.addEventListener('change', render);
+  searchInput.addEventListener('input', () => { clearTimeout(window._d); window._d = setTimeout(render, 200); });
+
+  document.getElementById('export-csv').addEventListener('click', () => {
+    const rows = [['id','received','name','email','phone','status','source_page','source_lang','utm_source','utm_medium','utm_campaign','message','notes']];
+    allLeads.forEach((L) => rows.push([L.id, L.createdAt, L.name, L.email, L.phone || '', L.status, L.sourcePage || '', L.sourceLang || '', L.utmSource || '', L.utmMedium || '', L.utmCampaign || '', L.message || '', L.notes || '']));
+    const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = `leads-${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  function escapeHtml(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function escapeAttr(s) { return escapeHtml(s).replace(/"/g, '&quot;'); }
+
+  loadLeads();
+</script>
+</body>
+</html>

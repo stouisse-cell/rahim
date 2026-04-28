@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Properties | Rahim International Admin</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand">Rahim <span>International</span></div>
+    <div class="admin-sub">Admin</div>
+    <nav class="admin-nav">
+      <a href="index.html">Dashboard</a>
+      <a href="leads.html">Leads</a>
+      <a href="properties.html" class="active">Properties</a>
+    </nav>
+    <div class="admin-foot">
+      <a href="/" target="_blank">View site →</a><br>
+      <a href="#" data-logout>Sign out</a>
+    </div>
+  </aside>
+  <main class="admin-main">
+    <div class="admin-header">
+      <h1>Properties</h1>
+      <div class="actions">
+        <button class="btn copper" id="new-property">+ New property</button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;">
+      <table class="data" id="props-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>City</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th class="num">Price (MAD)</th>
+            <th>Visibility</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody><tr><td colspan="7" style="padding:2rem;color:var(--muted);">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal" id="modal-body"></div>
+</div>
+
+<script src="admin.js"></script>
+<script>
+  let allProps = [];
+  const tbody = document.querySelector('#props-table tbody');
+  const modal = document.getElementById('modal');
+  const modalBody = document.getElementById('modal-body');
+
+  async function load() {
+    try {
+      allProps = await AdminAPI.get('/api/admin/properties');
+      render();
+    } catch (err) {
+      if (err.message !== 'unauthorized') {
+        tbody.innerHTML = `<tr><td colspan="7" style="padding:2rem;color:var(--bad);">Failed to load.</td></tr>`;
+      }
+    }
+  }
+
+  function render() {
+    if (!allProps.length) {
+      tbody.innerHTML = `<tr><td colspan="7" style="padding:2rem;color:var(--muted);">No properties yet — click "New property" to add your first one.</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = allProps.map((p) => `
+      <tr>
+        <td>
+          <strong>${escapeHtml(p.title)}</strong>
+          ${p.featured ? '<span class="pill featured" style="margin-left:.4rem;">Featured</span>' : ''}
+          <div style="color:var(--muted);font-size:0.78rem;font-family:monospace;">/${escapeHtml(p.slug)}</div>
+        </td>
+        <td>${escapeHtml(p.city)}${p.neighborhood ? ` · <span style="color:var(--muted);">${escapeHtml(p.neighborhood)}</span>` : ''}</td>
+        <td style="text-transform:capitalize;">${escapeHtml(p.propertyType)}</td>
+        <td>${escapeHtml(p.status)}</td>
+        <td class="num">${fmtMoney(p.price)}</td>
+        <td><span class="pill ${p.published ? 'published' : 'draft'}">${p.published ? 'Published' : 'Draft'}</span></td>
+        <td style="white-space:nowrap;">
+          <a class="btn small ghost" href="/property.html?slug=${encodeURIComponent(p.slug)}" target="_blank">View</a>
+          <button class="btn small" data-edit="${p.id}">Edit</button>
+        </td>
+      </tr>
+    `).join('');
+
+    tbody.querySelectorAll('[data-edit]').forEach((b) =>
+      b.addEventListener('click', () => openEditor(Number(b.dataset.edit))),
+    );
+  }
+
+  function blankProperty() {
+    return {
+      id: null,
+      slug: '', title: '', titleFr: '', titleAr: '',
+      description: '', descriptionFr: '', descriptionAr: '',
+      city: '', neighborhood: '', propertyType: 'apartment',
+      status: 'ready', price: 0, bedrooms: 0, bathrooms: 0, areaSqm: 0,
+      yearBuilt: '', images: [], features: [],
+      locationLat: '', locationLng: '',
+      featured: false, published: true,
+    };
+  }
+
+  function openEditor(id) {
+    const isNew = id == null;
+    const p = isNew ? blankProperty() : { ...allProps.find((x) => x.id === id) };
+    modalBody.innerHTML = `
+      <h2>${isNew ? 'New property' : 'Edit property'}</h2>
+      <form id="prop-form">
+        <div class="row-2">
+          <label class="field"><span>Title (English)</span><input name="title" value="${escapeAttr(p.title)}" required></label>
+          <label class="field"><span>Slug (URL)</span><input name="slug" value="${escapeAttr(p.slug)}" pattern="[a-z0-9\\-]+" required placeholder="e.g. elaf-sky-view-2bd"></label>
+        </div>
+        <div class="row-2">
+          <label class="field"><span>Title (French, optional)</span><input name="titleFr" value="${escapeAttr(p.titleFr || '')}"></label>
+          <label class="field"><span>Title (Arabic, optional)</span><input name="titleAr" value="${escapeAttr(p.titleAr || '')}"></label>
+        </div>
+        <div class="row-2">
+          <label class="field"><span>City</span><input name="city" value="${escapeAttr(p.city)}" required placeholder="Kénitra, Rabat, Salé…"></label>
+          <label class="field"><span>Neighborhood</span><input name="neighborhood" value="${escapeAttr(p.neighborhood || '')}"></label>
+        </div>
+        <div class="row-3">
+          <label class="field"><span>Property type</span>
+            <select name="propertyType">
+              ${['apartment','villa','townhouse','land','commercial','office','riad','studio'].map((t) =>
+                `<option value="${t}" ${p.propertyType === t ? 'selected' : ''}>${t}</option>`
+              ).join('')}
+            </select>
+          </label>
+          <label class="field"><span>Status</span>
+            <select name="status">
+              ${['ready','off-plan','sold','rented'].map((s) =>
+                `<option value="${s}" ${p.status === s ? 'selected' : ''}>${s}</option>`
+              ).join('')}
+            </select>
+          </label>
+          <label class="field"><span>Price (MAD)</span><input name="price" type="number" min="0" step="10000" value="${p.price || 0}" required></label>
+        </div>
+        <div class="row-3">
+          <label class="field"><span>Bedrooms</span><input name="bedrooms" type="number" min="0" value="${p.bedrooms || 0}"></label>
+          <label class="field"><span>Bathrooms</span><input name="bathrooms" type="number" min="0" value="${p.bathrooms || 0}"></label>
+          <label class="field"><span>Area (m²)</span><input name="areaSqm" type="number" min="0" value="${p.areaSqm || 0}"></label>
+        </div>
+        <div class="row-3">
+          <label class="field"><span>Year built</span><input name="yearBuilt" type="number" min="1800" max="2100" value="${p.yearBuilt || ''}" placeholder="optional"></label>
+          <label class="field"><span>Latitude</span><input name="locationLat" type="number" step="any" value="${p.locationLat ?? ''}" placeholder="optional"></label>
+          <label class="field"><span>Longitude</span><input name="locationLng" type="number" step="any" value="${p.locationLng ?? ''}" placeholder="optional"></label>
+        </div>
+        <label class="field">
+          <span>Description (English)</span>
+          <textarea name="description" rows="5" required>${escapeHtml(p.description)}</textarea>
+        </label>
+        <div class="row-2">
+          <label class="field"><span>Description (French, optional)</span><textarea name="descriptionFr" rows="3">${escapeHtml(p.descriptionFr || '')}</textarea></label>
+          <label class="field"><span>Description (Arabic, optional)</span><textarea name="descriptionAr" rows="3">${escapeHtml(p.descriptionAr || '')}</textarea></label>
+        </div>
+        <label class="field">
+          <span>Image URLs (one per line)</span>
+          <textarea name="images" rows="4" placeholder="https://…">${escapeHtml((p.images || []).join('\n'))}</textarea>
+        </label>
+        <label class="field">
+          <span>Features (one per line)</span>
+          <textarea name="features" rows="4" placeholder="Pool\nGated parking\nLift">${escapeHtml((p.features || []).join('\n'))}</textarea>
+        </label>
+        <div style="display:flex;gap:1.6rem;margin:1rem 0;">
+          <label style="display:flex;gap:.5rem;align-items:center;"><input type="checkbox" name="featured" ${p.featured ? 'checked' : ''}> Featured</label>
+          <label style="display:flex;gap:.5rem;align-items:center;"><input type="checkbox" name="published" ${p.published ? 'checked' : ''}> Published</label>
+        </div>
+        <div class="modal-actions">
+          ${!isNew ? `<button type="button" class="btn danger" id="m-delete">Delete</button>` : ''}
+          <button type="button" class="btn ghost" id="m-close">Cancel</button>
+          <button type="submit" class="btn copper">${isNew ? 'Create' : 'Save'}</button>
+        </div>
+      </form>
+    `;
+    modal.classList.add('is-open');
+
+    document.getElementById('m-close').addEventListener('click', closeModal);
+    if (!isNew) {
+      document.getElementById('m-delete').addEventListener('click', async () => {
+        if (!confirm(`Delete "${p.title}"? This cannot be undone.`)) return;
+        try {
+          await AdminAPI.del(`/api/admin/properties/${id}`);
+          allProps = allProps.filter((x) => x.id !== id);
+          toast('Deleted');
+          render();
+          closeModal();
+        } catch (err) {
+          if (err.message !== 'unauthorized') toast('Delete failed', 'error');
+        }
+      });
+    }
+
+    document.getElementById('prop-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const payload = {
+        slug: fd.get('slug').toString().trim(),
+        title: fd.get('title').toString().trim(),
+        titleFr: fd.get('titleFr')?.toString().trim() || null,
+        titleAr: fd.get('titleAr')?.toString().trim() || null,
+        description: fd.get('description').toString(),
+        descriptionFr: fd.get('descriptionFr')?.toString().trim() || null,
+        descriptionAr: fd.get('descriptionAr')?.toString().trim() || null,
+        city: fd.get('city').toString().trim(),
+        neighborhood: fd.get('neighborhood')?.toString().trim() || null,
+        propertyType: fd.get('propertyType').toString(),
+        status: fd.get('status').toString(),
+        price: Number(fd.get('price')) || 0,
+        bedrooms: Number(fd.get('bedrooms')) || 0,
+        bathrooms: Number(fd.get('bathrooms')) || 0,
+        areaSqm: Number(fd.get('areaSqm')) || 0,
+        yearBuilt: fd.get('yearBuilt') ? Number(fd.get('yearBuilt')) : null,
+        locationLat: fd.get('locationLat') !== '' ? Number(fd.get('locationLat')) : null,
+        locationLng: fd.get('locationLng') !== '' ? Number(fd.get('locationLng')) : null,
+        images: fd.get('images').toString().split('\n').map((s) => s.trim()).filter(Boolean),
+        features: fd.get('features').toString().split('\n').map((s) => s.trim()).filter(Boolean),
+        featured: fd.get('featured') === 'on',
+        published: fd.get('published') === 'on',
+      };
+
+      try {
+        if (isNew) {
+          const created = await AdminAPI.post('/api/admin/properties', payload);
+          allProps.unshift(created);
+          toast('Created');
+        } else {
+          const updated = await AdminAPI.patch(`/api/admin/properties/${id}`, payload);
+          const idx = allProps.findIndex((x) => x.id === id);
+          if (idx >= 0) allProps[idx] = updated;
+          toast('Saved');
+        }
+        render();
+        closeModal();
+      } catch (err) {
+        if (err.message !== 'unauthorized') toast(err.message || 'Save failed', 'error');
+      }
+    });
+  }
+
+  function closeModal() { modal.classList.remove('is-open'); }
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  document.getElementById('new-property').addEventListener('click', () => openEditor(null));
+
+  function escapeHtml(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  function escapeAttr(s) { return escapeHtml(s).replace(/"/g, '&quot;'); }
+
+  load();
+</script>
+</body>
+</html>
